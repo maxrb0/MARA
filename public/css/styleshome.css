@@ -43,19 +43,21 @@ height: 85%;
     margin-left: -35px;
 }
 
-body .footer {
+.footer {
     display: flex;
+    justify-content: space-between;
 }
 
 
 .logoFooter{
-    width: 40%;
-height: 55%;
+    width: 30%;
+    height: 70%;
 }
 
 .footerLinks{
     list-style: none;
     margin-left: -250px;
+    margin-top: -3px;
 }
 
 .contactoFull{
