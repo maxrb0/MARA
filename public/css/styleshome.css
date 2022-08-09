@@ -1,0 +1,64 @@
+body{
+    margin: 0px;
+    padding: 0px;    
+    background-color: rgb(107, 115, 228);
+   
+}
+
+
+.top-header{
+    display: flex; 
+ background-color:rgb(107, 115, 228);
+ justify-content: space-between;
+}
+
+.logo{
+    width: 25%;
+height: 85%;
+}
+
+.nombrePagina {
+    font-size: medium;
+    margin-left: -300px;
+}
+
+.topRow {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.iconosTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.categoriasFull{
+    display: flex;
+}
+
+
+.categorias{
+    list-style: none;
+    margin-left: -35px;
+}
+
+body .footer {
+    display: flex;
+}
+
+
+.logoFooter{
+    width: 40%;
+height: 55%;
+}
+
+.footerLinks{
+    list-style: none;
+    margin-left: -250px;
+}
+
+.contactoFull{
+    display: flex;
+    flex-direction: column;
+}
