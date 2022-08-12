@@ -47,14 +47,40 @@ body{
     justify-content: space-between;
 }
 
-.categoriasFull{
+.bodyTotal{
     display: flex;
+
 }
 
+.bodyimagenes{
+    display:flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
 
+.imagenesBody{
+    display: flex;
+    flex-direction: row;
+    max-width: 15vw;
+    max-height: 30vh;
+}
+
+.categoriasFull{
+    display: flex;
+    border-right: solid black 3px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.linksIzq{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .categorias{
     list-style: none;
     margin-left: -40px;
+    flex-wrap: wrap;
+    max-width: 20px;
 }
 
 .footer {
@@ -64,18 +90,24 @@ body{
 
 
 .logoFooter{
-    width: 30%;
-    height: 70%;
+    width: 70%;
+    margin-top: 7%; 
+    margin-left: 5%;
+    margin-bottom: 5%;
+
+
 }
 
 .footerLinks{
     list-style: none;
-    margin-left: -250px;
     margin-top: -3px;
+    text-align: center;
+    
 }
 
 .contactoFull{
     display: flex;
     flex-direction: column;
+
 }
 
