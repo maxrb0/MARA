@@ -9,27 +9,40 @@
 }
 
 body{  
-    padding-bottom: 12vh;
     background-color: rgb(150, 175, 194);
+    position: relative;
+    padding-bottom: 12vh;
+    min-height: 100vh;
 }
 
+.bodyimagenes{
+    display:flex;
+    flex-direction: column;
+    margin-left: 20px;
+    
+    
+}
+
+.imagenesBody{
+    display: flex;
+    gap: 3px;
+    flex-direction: row ;
+}
 
 .top-header{
     display: flex; 
- background-color:rgb(0, 80, 138);
- justify-content: space-between;
+    justify-content: space-between;
+    background-color:#192537;
 }
 
 
 .lugarLogo{
-    max-width: 30vw;
-    
+    max-width: 35vw;
 }
 
 .logoHeader{
     width: 110%;
     margin-top: 6%; 
-    margin-left: 2%;
     margin-bottom: 4%;
     flex-wrap: wrap;
     border-radius: 6px;
@@ -43,44 +56,60 @@ body{
 .nombrePagina {
     margin: auto;
     font-size: 80%;
-    margin-left: 8%;
-}
-
-.logoFooter{
-    width: 110%;
-    max-height: 9vh;
-    margin-top: 4%; 
     margin-left: 2%;
-    margin-bottom: 2%;
-    flex-wrap: wrap;
-    border-radius: 6px;
+    margin-right: 0%;
+    color: white;
 }
-
-
 
 .topRow {
     box-shadow: none;
     display: flex;
     justify-content: space-around;
     list-style: none;
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.burger-menu{
+    text-align: center;
+    display: block;
+    padding-bottom: 3%;
+    margin-left: 57px;
+    
+}
+.burger-menu i{
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin: 0 auto;
+    font-size: 20px;
 }
 
 .contBarraLogo{
-    padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
     max-height: min-content;
-    
+    background-color: #192436
 }
 
 .barraLupa{
     display: flex;
     margin: auto;
+    justify-content: center;
 }
-i{
+
+.barraLupa div.lupa i{
     color: black;
-}
-.footerLinks{
-    color: black;
+    background-color: #FFF;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    width: fit-content;
+    height: max-content;
 }
 
 .barra{
@@ -88,21 +117,9 @@ i{
     border-radius: 5px;
 }
 
-
-
-.bodyimagenes{
-    display:flex;
-    flex-direction: column;
-    margin-left: 20px;
-    
+.contarritoMercado i{
+    color: white;
 }
-
-.imagenesBody{
-    display: flex;
-    gap: 3px;
-    flex-direction: row ;
-}
-
 
 
 .linksIzq{
@@ -115,22 +132,54 @@ i{
     display: flex;
     justify-content: space-around;
     width: 100%;
+    background-color:#192537;
+    position: static;
     position: absolute;
     bottom: 0;
+    width: 100%;
     max-height: 11vh;
-    background-color:rgb(0, 80, 138);
 }
 
-
-.footerLinks{
-    list-style: none;
-    text-align: center;
-    
+.logoFooter{
+    width: 110%;
+    max-height: 9vh;
+    margin-top: 10%; 
+    margin-left: -2%;
+    margin-bottom: 2%;
+    flex-wrap: wrap;
+    border-radius: 6px;
 }
+
 
 .contactoFull{
     display: flex;
     flex-direction: column;
+    color: white;
+    margin-top: 3%;
+}
 
+.footerLinks{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    color: white;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.footerLinks a{
+    color: white;
+    
+}
+.conocenos{
+    padding-bottom: 4%;
+    
+}
+
+.mision{
+padding-top: 8px;
+padding-bottom: 4px;
+margin-bottom: 8%;
 }
 

@@ -4,92 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>El mundo de las camisetas</title>
     <link rel="stylesheet" href="/css/styleshome.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 
 <body>
     <header>
         <div class="top-header">
-            <span class="lugarLogo"> 
+            <div class="lugarLogo"> 
                 <a href="/">
-                    <img class="logoHeader" src="/design/logo escogido.png" alt="Logo de Empresa">
-                    </a>
-            </span>
-            <span class="nombrePagina">El Mundo De Las Camisetas</span>
-            <span class="iconosTop">
-            <i class="fas fa-user"> </i>
-            <i class="fa fa-shopping-cart"> </i>
-        </span>
+                    <img class="logoHeader" src="design/logooooooo.PNG" alt="Logo de Empresa">
+                </a>
+            </div>
+            <h1 class="nombrePagina">El Mundo De Las Camisetas</h1>
+            <div class="iconosTop">
+                <div class="contarritoMercado"> 
+                    <a href="/productCart">
+                        <i class="fa fa-shopping-cart"></i></a>
+                        </a>
+                </div>  
+            </div>
     </div>
     </header>
-
-
-<div class="container text-center">
-    <div style="margin-top: 100px;" class="text-center container">
-        <h1 style="font-size: 40px;">Login</h1>
-
-
-        <svg style="margin-top: 30px; color:navy" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            <path fill-rule="evenodd"
-                d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
-            <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-        </svg>
-
-        <div class="row container">
-
-
-
-            <mat-card style="background-color: #F5F5F5;">
-                <div class="text-center">
-                    <mat-form-field class="w-100">
-                        <mat-label>Email</mat-label>
-                        <input matInput [(ngModel)]="email" placeholder="Ingresa tu usuario">
-                    </mat-form-field>
+    <main>
+    <div class="contBarraLogo">
+        <div>
+            <div class="burger-menu">
+                <i class="fa fa-bars burger"></i>
+            </div>
+        </div>
+            <div class="barraLupa">
+                <input class="barra" placeholder="Buscar camisetas">
+                <div class="lupa"> 
+                    <div><a href="#"><i class="fa fa-search"></i></a></div>
                 </div>
-                <div class=" text-center">
-                    <mat-form-field class="w-100">
-                        <mat-label>Contraseña</mat-label>
-                        <input type="password" [(ngModel)]="constraseña" matInput placeholder="*******">
-                </div>
-                <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 20px;">
-                    <button mat-raised-button (click)="onLogin()">Ingresa</button>
-                </div>
-                <div class="etc-login-form" style=" margin-top:10px;color: #0b0909">
-                    <p>Olvidaste tu contraseña? <a href="#">haz click aquí</a></p>
-                    <p>Nuevo usuario? <a href="/register">Crea una nueva cuenta</a></p>
-                </div>
-            </mat-card>
+            </div>
+    </div>
+    
+    <main>
+    <!--El contenido de la pagina seria-->
+    <!--Desde acá-->
 
+
+
+
+
+
+    <div class="container text-center">
+        <div style="margin-top: 100px;" class="text-center container">
+            <h1 style="font-size: 40px;">Login</h1>
+    
+    
+            <svg style="margin-top: 30px; color:navy" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                <path fill-rule="evenodd"
+                    d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+            </svg>
+    
+            <div class="row container">
+    
+    
+    
+                <mat-card style="background-color: #F5F5F5;">
+                    <div class="text-center">
+                        <mat-form-field class="w-100">
+                            <mat-label>Email</mat-label>
+                            <input matInput [(ngModel)]="email" placeholder="Ingresa tu usuario">
+                        </mat-form-field>
+                    </div>
+                    <div class=" text-center">
+                        <mat-form-field class="w-100">
+                            <mat-label>Contraseña</mat-label>
+                            <input type="password" [(ngModel)]="constraseña" matInput placeholder="*******">
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 20px;">
+                        <button mat-raised-button (click)="onLogin()">Ingresa</button>
+                    </div>
+                    <div class="etc-login-form" style=" margin-top:10px;color: #0b0909">
+                        <p>Olvidaste tu contraseña? <a href="#">haz click aquí</a></p>
+                        <p>Nuevo usuario? <a href="/register">Crea una nueva cuenta</a></p>
+                    </div>
+                </mat-card>
+    
+            </div>
+    
+        </div>
+    </div>
+
+
+
+
+
+    <!--Hasta acá acá-->
+    <!--Lo otro es header y footer-->
+    </main>
+
+    <footer class="footer"> 
+        <div class="lugarLogo"> 
+            <a href="/">
+                <img class="logoFooter" src="design/logooooooo.PNG" alt="Logo de Empresa">
+                </a>
+            </div>
+        <div class="footerLinks">
+            <a class="conocenos" href="#"> Conócenos </a>
+            <a class="mision" href="#"> Misión </a>
         </div>
 
-    </div>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-
-<footer class="footer"> 
-    <span> 
-        <a href="/">
-            <img class="logoFooter" src="/design/logo escogido.png" alt="Logo de Empresa">
-            </a>
-    </span>
-<ul class="footerLinks">
-<li><a href=""> Conócenos </a></li>
-<li><a href=""> Misión </a></li>
-<li><a href=""> Preguntas Frecuentes </a></li>
-</ul>
-<span class="contactoFull">
-<span class="contacto">Contacto </span>
-<span class="iconosFooter">      
-<i class="fa fa-phone"></i>
-    <i class="fas fa-comment-alt"></i>
-    <i class="fa fa-camera"></i>
-</span>
-</span>
-</footer>
+        <div class="contactoFull">
+            <div class="contacto">Contacto </div>
+            <div class="iconosFooter">      
+                <i class="fa fa-phone"></i>
+                <i class="fas fa-comment-alt"></i>
+                <i class="fa fa-camera"></i>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
