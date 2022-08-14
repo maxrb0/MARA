@@ -41,7 +41,7 @@ body{
 }
 
 .logoHeader{
-    width: 110%;
+    width: 100%;
     margin-top: 6%; 
     margin-bottom: 4%;
     flex-wrap: wrap;
@@ -115,6 +115,7 @@ body{
 .barra{
     border: 3px solid transparent; 
     border-radius: 5px;
+    text-align: center;
 }
 
 .contarritoMercado i{
@@ -141,10 +142,10 @@ body{
 }
 
 .logoFooter{
-    width: 110%;
+    width: 100%;
     max-height: 9vh;
-    margin-top: 10%; 
-    margin-left: -2%;
+    margin-left: -9%;
+    margin-top: 10%;
     margin-bottom: 2%;
     flex-wrap: wrap;
     border-radius: 6px;
@@ -158,28 +159,8 @@ body{
     margin-top: 3%;
 }
 
-.footerLinks{
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    color: white;
-    flex-wrap: wrap;
-    margin-top: 2%;
-    text-align: center;
+.iconosFooter{
+ 
 }
-
-.footerLinks a{
-    color: white;
-    
-}
-.conocenos{
-    padding-bottom: 4%;
-    
-}
-
-.mision{
-padding-top: 8px;
-padding-bottom: 4px;
-margin-bottom: 8%;
-}
+ 
 

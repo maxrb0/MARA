@@ -19,3 +19,31 @@
     max-width: 20px;
     max-height: max-content;
 }
+
+.footerLinks{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    color: white;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    text-align: center;
+    margin-left: -6%;
+    
+}
+
+
+.footerLinks a{
+    color: white;
+    
+}
+.conocenos{
+    padding-bottom: 4px;
+    
+}
+
+.mision{
+padding-top: 8px;
+padding-bottom: 4px;
+margin-bottom: 8%;
+}
