@@ -160,7 +160,10 @@ body{
 }
 
 .iconosFooter{
- 
+    display: flex;
+    justify-content: space-around;
+    margin-left: -5px;
+    margin-top: 5px;
 }
  
 
