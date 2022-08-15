@@ -100,9 +100,9 @@ body{
 
 .footerLinks{
     list-style: none;
-    margin-top: -3px;
+    margin-top: 10px;
     text-align: center;
-    
+    justify-content: center;    
 }
 
 .contactoFull{
