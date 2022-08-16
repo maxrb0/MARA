@@ -238,6 +238,7 @@ div article img{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin: auto;
 }
 
 .formSignup{
@@ -260,9 +261,14 @@ div article img{
 }
 
 .loginPage{
+    display: flex;
+    flex-direction: column;
 margin: auto;
 }
 
+.loginTitulo{
+    margin: auto;
+}
 @media(min-width:361px){
     .lugarLogo{
         max-width: 35vw
