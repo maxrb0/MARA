@@ -15,29 +15,46 @@ body{
     min-height: 100vh;
 }
 
+
+.titulos{
+    font-size: 20px;
+    text-align: center;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+
 .bodyimagenes{
     display: flex;
-    margin-left: 20px;
+       margin-left: 20px;
    flex-direction: row; 
+    flex-direction: row;
+    background-color: #192436;
+    padding: 10px;
+    margin-bottom: 25px;
 }
 
-.imagenesBody{
+div article img{
     display: flex;
-    gap: 3px;
-    flex-direction: row ;
+    width: 70%;
+    height: 100%;
+    margin: auto;
 }
-
 
 
 .top-header{
     display: flex; 
     justify-content: space-between;
     background-color:#192537;
+    max-width: 100vw;
 }
 
 
 .lugarLogo{
     max-width: 35vw;
+}
+.lugarLogoF{
+    max-width: 40vw;
 }
 
 .logoHeader{
@@ -68,15 +85,21 @@ body{
     list-style: none;
     margin: auto;
     padding-top: 1%;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid #192537;
+
+}
+.topRow li a{
+    color: black;
+}
+
+.contMenu{
+    margin: auto;
 }
 
 .burger-menu{
-    text-align: center;
-    display: block;
+    display: flex;
     padding-bottom: 3%;
-    margin-left: 57px;
-    
 }
 .burger-menu i{
     width: 30px;
@@ -86,21 +109,21 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 6px;
-    margin: 0 auto;
     font-size: 20px;
 }
 
 .contBarraLogo{
     padding-bottom: 2%;
     display: flex;
-    max-height: min-content;
-    background-color: #192436
+    background-color: #192436;
+    margin: auto;
+    justify-content: space-between;
 }
 
 .barraLupa{
     display: flex;
     margin: auto;
-    justify-content: center;
+    min-width: 30vh;
 }
 
 .barraLupa div.lupa i{
@@ -116,10 +139,14 @@ body{
     border: 3px solid transparent; 
     border-radius: 5px;
     text-align: center;
+    min-width: 60%;
+    margin-left: 15%;
 }
+
 
 .contarritoMercado i{
     color: white;
+    font-size: 100%;
 }
 
 
@@ -138,13 +165,11 @@ body{
     position: absolute;
     bottom: 0;
     width: 100%;
-    max-height: 11vh;
 }
 
 .logoFooter{
     width: 100%;
     max-height: 9vh;
-    margin-left: -9%;
     margin-top: 10%;
     margin-bottom: 2%;
     flex-wrap: wrap;
@@ -166,6 +191,168 @@ body{
     margin-top: 3%;
 }
 
+.iconosFooter{
+    display: flex;
+    justify-content: space-around;
+    margin-left: -5px;
+    margin-top: 5px;
+}
 
- 
+.producto3{
+    display: none ;
+}
 
+.lugarCategorias{
+    display: flex;
+    max-height: 100%;
+    flex-wrap: wrap;
+}
+
+
+.categorias{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 4%;
+    max-width: 70%;
+    text-align: center;
+    margin-left: 8%;
+}
+.bodyTotal{
+    display: flex;
+}
+
+.lugarCategorias{
+    display: none;
+}
+
+.btnEnviar{
+    transition: background 0.5s; 
+}
+
+.btnEnviar:hover{
+    background: rgb(255, 0, 0); 
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.formSignup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 20%;
+}
+
+@media(min-width:361px){
+    .lugarLogo{
+        max-width: 35vw
+    }
+    .lugarLogoF{
+    max-width: 50vw;
+    }
+    
+    .nombrePagina{
+        font-size: 90%;
+    }
+
+    .contarritoMercado{
+        font-size: 100%;
+    }
+   
+    .barra{
+        min-width: 90%;
+        margin-left: -5%;
+    }
+}
+
+
+
+@media(min-width:550px){
+    .lugarLogo{
+        max-width: 35vw
+    }
+
+    .lugarLogoF{
+        max-width: 60vw;
+    }
+
+    .nombrePagina{
+        font-size: 100%;
+        margin: auto;
+        margin-right: 10%;
+        text-align: center;
+    }
+
+    .contarritoMercado{
+        font-size: 120%;
+    }
+
+    .burger-menu i{
+        font-size: 23px ;
+    }
+
+    .barra{
+        min-width: 120%;
+        margin-left: -30%;
+    }
+}
+
+
+@media(min-width:754px){
+    .barra{
+        min-width: 170%;
+        margin-left: -70%;
+    }
+    .nombrePagina{
+        font-size: 130%;
+        margin: auto;
+        margin-right: 10%;
+        text-align: center;
+    }
+
+    .contarritoMercado{
+        font-size: 140%;
+        flex-wrap: wrap;
+        padding: 0%;
+    }
+
+    
+} 
+
+
+
+@media(min-width:1000px){
+    .barra{
+        min-width: 170%;
+        margin-left: -100%;
+    }
+    .producto3{
+        display: block;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+    
+    .lugarCategorias{
+        display: block;
+    }
+    .imagenesCamisetas{
+        margin-left: -3%;
+        padding-right: 3%;
+    }
+}
+
+@media(min-width:1350px){
+    .lugarLogo{
+        margin-left: 12%;
+    }
+    .barra{
+        min-width: 170%;
+        margin-left: -150%;
+    }
+}
