@@ -92,6 +92,7 @@ div article img{
 }
 .topRow li a{
     color: black;
+    font-weight: 600;
 }
 
 .contMenu{
@@ -189,7 +190,7 @@ div article img{
     display: flex;
     flex-direction: column;
     color: white;
-    margin-top: 3%;
+    margin-top: 4%;
 }
 
 .iconosFooter{
@@ -219,6 +220,12 @@ div article img{
     text-align: center;
     margin-left: 8%;
 }
+
+div div.lugarCategorias li a{
+    color: black;
+    font-weight: 600;
+}
+
 .bodyTotal{
     display: flex;
 }
@@ -341,6 +348,7 @@ margin: auto;
  
 
 @media(min-width:361px){
+    
     .lugarLogo{
         max-width: 35vw
     }
@@ -365,6 +373,9 @@ margin: auto;
 
 
 @media(min-width:550px){
+    .contactoFull{
+        font-size: 110%;
+    }
     .lugarLogo{
         max-width: 35vw
     }
@@ -396,6 +407,10 @@ margin: auto;
 
 
 @media(min-width:754px){
+    .contactoFull{
+        font-size: 110%;
+        margin-top: 3%;
+    }
     .barra{
         min-width: 170%;
         margin-left: -70%;
@@ -418,6 +433,10 @@ margin: auto;
 
 
 @media(min-width:1000px){
+    .contactoFull{
+        font-size: 140%;
+        margin-top: 2%;
+    }
 
     .bodyimagenes article{
         position: relative;
@@ -475,6 +494,10 @@ margin: auto;
 
 
 @media(min-width:1350px){
+    .contactoFull{
+        
+        margin-top: 1.2%;
+    }
     .lugarLogo{
         margin-left: 12%;
     }
