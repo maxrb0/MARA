@@ -26,6 +26,8 @@ body{
 
 .bodyimagenes{
     display: flex;
+       margin-left: 20px;
+   flex-direction: row; 
     flex-direction: row;
     background-color: #192436;
     padding: 10px;
@@ -225,6 +227,50 @@ div article img{
     display: none;
 }
 
+
+.btnEnviar{
+    transition: background 0.5s; 
+}
+
+.btnEnviar:hover{
+    background: rgb(255, 0, 0); 
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.formSignup{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 20%;
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+}
+
+.registerTitle{
+    margin: auto;
+}
+.forgotPass{
+    margin: auto;
+}
+
+.loginPage{
+    display: flex;
+    flex-direction: column;
+margin: auto;
+}
+
+.loginTitulo{
+    margin: auto;
+}
 
 
 @media(min-width:361px){
