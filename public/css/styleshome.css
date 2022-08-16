@@ -243,8 +243,24 @@ div article img{
 .formSignup{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    margin: auto;
     max-width: 20%;
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+}
+
+.registerTitle{
+    margin: auto;
+}
+.forgotPass{
+    margin: auto;
+}
+
+.loginPage{
+margin: auto;
 }
 
 @media(min-width:361px){
