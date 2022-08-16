@@ -30,6 +30,7 @@ body{
     background-color: #192436;
     padding: 10px;
     margin-bottom: 25px;
+    border-radius: 10px;
 }
 
 div article img{
@@ -224,6 +225,8 @@ div article img{
     display: none;
 }
 
+
+
 @media(min-width:361px){
     .lugarLogo{
         max-width: 35vw
@@ -298,11 +301,12 @@ div article img{
     }
 
     
-} 
-
+}  
 
 
 @media(min-width:1000px){
+
+
     .barra{
         min-width: 170%;
         margin-left: -100%;
@@ -322,7 +326,9 @@ div article img{
         margin-left: -3%;
         padding-right: 3%;
     }
+
 }
+
 
 @media(min-width:1350px){
     .lugarLogo{
@@ -331,5 +337,9 @@ div article img{
     .barra{
         min-width: 170%;
         margin-left: -150%;
+    }
+
+    .imagenesCamisetas{
+        margin-left: -1%;
     }
 }
