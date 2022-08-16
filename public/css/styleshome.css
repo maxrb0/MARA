@@ -24,11 +24,11 @@ body{
 }
 
 
+
+
 .bodyimagenes{
     display: flex;
-       margin-left: 20px;
-   flex-direction: row; 
-    flex-direction: row;
+    flex-direction: row; 
     background-color: #192436;
     padding: 10px;
     margin-bottom: 25px;
@@ -228,6 +228,73 @@ div article img{
 }
 
 
+
+.real img{
+    border-radius: 18px;
+}
+.barca img {
+    border-radius: 18px;
+}
+.atletico img {
+    border-radius: 18px;
+}
+.liverpool img {
+    border-radius: 18px;
+}
+.city img {
+    border-radius: 18px;
+}
+.chelsea img {
+    border-radius: 18px;
+}
+.argentina img {
+    border-radius: 18px;
+}
+.colombia img {
+    border-radius: 18px;
+}
+.brasil img {
+    border-radius: 18px;
+}
+.millonarios img {
+    border-radius: 18px;
+}
+.junior img {
+    border-radius: 18px;
+}
+.nacional img {
+    border-radius: 18px;
+}
+.boca img {
+    border-radius: 18px;
+}
+.river img {
+    border-radius: 18px;
+}
+.racing img {
+    border-radius: 18px;
+}
+
+.capa{
+    display: none;
+ }
+ .atletico{
+    display: none;
+ }
+ .chelsea{
+    display: none;
+ }
+ .brasil{
+    display: none;
+ }
+ .nacional{
+    display: none;
+ }
+ .racing{
+    display: none;
+ }
+
+
 .btnEnviar{
     transition: background 0.5s; 
 }
@@ -271,7 +338,7 @@ margin: auto;
 .loginTitulo{
     margin: auto;
 }
-
+ 
 
 @media(min-width:361px){
     .lugarLogo{
@@ -352,14 +419,45 @@ margin: auto;
 
 @media(min-width:1000px){
 
-
+    .bodyimagenes article{
+        position: relative;
+        overflow: hidden;
+    }
+    .bodyimagenes article a img{
+        transition: all 1000ms ease-out;
+    }
+    .bodyimagenes article a .capa{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        display: none;
+    }
+    .bodyimagenes article a:hover > .capa{
+        opacity: 1;
+        display: block;
+    }
+    
     .barra{
         min-width: 170%;
         margin-left: -100%;
     }
-    .producto3{
+    .atletico{
         display: block;
     }
+    .chelsea{
+        display: block;
+     }
+     .brasil{
+        display: block;
+     }
+     .nacional{
+        display: block;
+     }
+     .racing{
+        display: block;
+     }
 
     .burger-menu{
         display: none;
