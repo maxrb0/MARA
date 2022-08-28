@@ -20,36 +20,39 @@
 
 
     <main class="register">
-        <h2 class="registerTitle">Regístrate</h2>
-        <br>
+
+        <div class="fondo">
+
+        <h2 class="titulosForm">Regístrate</h2>
+        
         <form class="formSignup" action="/" method="POST">
-            <label for="info-personal"><b>Información Personal</b></label>
-            <br>
-            <input type="text" name="name" placeholder="Nombre y apellido">
-            <input type="text" name="user" placeholder="Nombre de usuario">
-            <input type="email" name="email" placeholder="E-mail">
-            <input type="text" name="addres" placeholder="Domicilio">
-            <br>
-            <label for="birth_date"><b>Fecha de nacimiento</b></label>
-            <br>
-            <input type="date" name="birth_date" id="birth_date">
-        <br>
-        <label for="contraseña"><b>Contraseña</b></label>
-        <br>
-            <input type="password" name="pass" placeholder="Elegí tu contraseña">
-                <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
-                <br>
-                <br>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar">
-                <br>
-                <br>
+            <label class="titulosForm" for="info-personal"><b>Información Personal</b></label>
+ 
+            <input class="textos" type="text" name="name" placeholder="Nombre y apellido">
+            <input class="textos" type="text" name="user" placeholder="Nombre de usuario">
+            <input class="textos" type="email" name="email" placeholder="E-mail">
+            <input class="textos" type="text" name="addres" placeholder="Domicilio">
+
+            <label class="titulosForm" for="birth_date"><b>Fecha de nacimiento</b></label>
+
+            <input class="textos" type="date" name="birth_date" id="birth_date">
+
+        <label class="titulosForm" for="contraseña"><b>Contraseña</b></label>
+
+            <input class="textos" type="password" name="pass" placeholder="Elegí tu contraseña">
+                <input class="textos" type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+     
+   
+                <input class="botones" type="submit" value="Enviar">
+                <input class="botones" type="reset" value="Borrar">
+     
             </form>
+         
             <span class="forgotPass">
-                <a href="/login" title="login" id="link-login">Ya tenés una cuenta? Ingresá aquí</a>
+                <a class="titulosForm2" href="/login" title="login" id="link-login">Ya tenés una cuenta? Ingresá aquí</a>
               </span>
-              <br>
-              <br>
+            </div>
+    
         </main>
 
 

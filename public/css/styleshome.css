@@ -63,7 +63,6 @@ div article img{
 
 .top-header{
     display: flex; 
-    justify-content: space-between;
     background-color:#192537;
     max-width: 100vw;
 }
@@ -142,8 +141,9 @@ div article img{
 
 .barraLupa{
     display: flex;
+    justify-content: center;
     margin: auto;
-    min-width: 30vh;
+    min-width: 30vw;
 }
 
 .barraLupa div.lupa i{
@@ -159,8 +159,6 @@ div article img{
     border: 3px solid transparent; 
     border-radius: 5px;
     text-align: center;
-    min-width: 60%;
-    margin-left: 15%;
 }
 
 
@@ -319,16 +317,7 @@ div div.lugarCategorias li a{
     display: none;
  }
 
-
-.btnEnviar{
-    transition: background 0.5s; 
-}
-
-.btnEnviar:hover{
-    background: rgb(255, 0, 0); 
-}
-
-.loginForm{
+ .loginForm{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -339,37 +328,77 @@ div div.lugarCategorias li a{
     display: flex;
     flex-direction: column;
     margin: auto;
-    max-width: 20%;
+}
+
+.fondo{
+    display: flex;
+    flex-direction: column;
+    background-color: #192436;
+    width: 85vw;
+    margin: auto;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+
+.textos{
+    width: 40vw;
+    margin: 8px;
+}
+
+.botones{
+    max-width: 50px;
+    margin: auto;
+}
+
+.titulosForm{
+    color: white;
+    margin: auto;
+    padding-bottom: 2%;
+}
+
+.forgotPass{
+    padding-top: 2%;
+    margin: auto;
+}
+
+.forgotPass2{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+    margin: auto;
+    
+}
+
+.titulosForm2{
+    color: white;
 }
 
 .register{
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
 }
 
-.registerTitle{
-    margin: auto;
-}
-.forgotPass{
-    margin: auto;
-}
 
 .loginPage{
     display: flex;
     flex-direction: column;
-margin: auto;
+    margin-top: 50px;
 }
 
-.loginTitulo{
-    margin: auto;
-}
+
+
+
+
  
 
 @media(min-width:361px){
-    
-    .lugarLogo{
-        max-width: 35vw
+    .barra{
+        min-width: 110%;
+        margin-left: -30%;
     }
+    
     .lugarLogoF{
     max-width: 50vw;
     }
@@ -377,15 +406,7 @@ margin: auto;
     .nombrePagina{
         font-size: 90%;
     }
-
-    .contarritoMercado{
-        font-size: 100%;
-    }
    
-    .barra{
-        min-width: 90%;
-        margin-left: -5%;
-    }
 }
 
 
@@ -393,9 +414,6 @@ margin: auto;
 @media(min-width:550px){
     .contactoFull{
         font-size: 110%;
-    }
-    .lugarLogo{
-        max-width: 35vw
     }
 
     .lugarLogoF{
@@ -409,22 +427,33 @@ margin: auto;
         text-align: center;
     }
 
-    .contarritoMercado{
-        font-size: 120%;
-    }
 
     .burger-menu i{
         font-size: 23px ;
     }
 
     .barra{
-        min-width: 120%;
-        margin-left: -30%;
+        min-width: 150%;
+        margin-left: -50%;
     }
+
 }
 
 
 @media(min-width:754px){
+    .fondo{
+        margin-bottom: 4%;
+    }
+    
+    .botones{
+        transition: background 0.5s; 
+    }
+    
+    .botones:hover{
+        background-color: #192436;
+        color: white;
+        border: solid 2px white;
+    }
     .contactoFull{
         font-size: 110%;
         margin-top: 3%;
@@ -442,7 +471,6 @@ margin: auto;
 
     .contarritoMercado{
         font-size: 140%;
-        flex-wrap: wrap;
         padding: 0%;
     }
 
@@ -451,6 +479,15 @@ margin: auto;
 
 
 @media(min-width:1000px){
+
+
+    .top-header{
+        margin: auto;
+    }
+    .logoHeader{
+        margin-left: 15%;
+    }
+    
     .contactoFull{
         font-size: 140%;
         margin-top: 2%;
@@ -476,10 +513,6 @@ margin: auto;
         display: block;
     }
     
-    .barra{
-        min-width: 170%;
-        margin-left: -100%;
-    }
     .atletico{
         display: block;
     }
@@ -511,17 +544,20 @@ margin: auto;
 }
 
 
-@media(min-width:1350px){
-    .contactoFull{
-        
-        margin-top: 1.2%;
-    }
+@media(min-width:1300px){
     .lugarLogo{
-        margin-left: 12%;
+        margin-top: -1%;
+        margin-bottom: 3%;
+        margin-left: 8%;
     }
+    .logoHeader{
+        margin-left: 15%;
+        margin-top: 15%;
+    }
+    
     .barra{
         min-width: 170%;
-        margin-left: -150%;
+        margin-left: -105%;
     }
 
     .imagenesCamisetas{
