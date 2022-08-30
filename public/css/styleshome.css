@@ -37,11 +37,24 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #192436;
+    margin-bottom: 2%;
+    padding-bottom: 4%;
 }
 
-.imgProducto{
+.imgProducto img{
     border-radius: 18px;
 }
+
+.textoDetalle{
+    color: white;
+    font-size: 120%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
 
 
 .bodyimagenes{
@@ -51,6 +64,7 @@ body{
     padding: 10px;
     margin-bottom: 25px;
     border-radius: 10px;
+    padding: 2%;
 }
 
 div article img{
@@ -441,6 +455,11 @@ div div.lugarCategorias li a{
 
 
 @media(min-width:754px){
+
+    .detalleProducto{
+        padding-bottom: 2%;
+    }
+
     .fondo{
         margin-bottom: 4%;
     }
@@ -480,6 +499,7 @@ div div.lugarCategorias li a{
 
 @media(min-width:1000px){
 
+    
 
     .top-header{
         margin: auto;
