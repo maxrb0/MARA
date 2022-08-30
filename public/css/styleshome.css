@@ -38,7 +38,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #192436;
-    margin-bottom: 2%;
+    margin-bottom: 8%;
 }
 
 .tituloDetalle{
@@ -467,10 +467,83 @@ div div.lugarCategorias li a{
 
 .imgProducto{
     text-align: center;
+    
+ }
+
+ /* CARRITO DE COMPRAS */
+
+
+ .contenedorMayor2{
+    display: flex;
+    flex-direction: row;
+    background-color: #192436;
+    margin-top: 4%;
+    max-width: max-content;
+    padding: 1%;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+ }
+
+ 
+ .contenedorProducto{
+    display: flex;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+ }
+ .contenedorProducto img{
+    border-radius: 18px;
+    width: 40%;
+    text-align: center;
+ }
+
+ .contTalla{
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    margin: auto;
+ }
+
+ .textoCarrito{
+    color: white;
+    font-size: 80%;
+ }
+
+ .categoria{
+    text-align: center;
  }
  
+ .basurita{
+    color: white;
+    margin: auto;
+ }
+
+ .prodCarrito{
+    max-height: 40vh;
+    max-width: 40vw;
+    margin-right: 5%;
+}
+ 
+.contenedorProducto2{
+    display: flex;
+    flex-direction: column;
+    background-color: #192436;
+    margin-top: 2%;
+    max-height: max-content;  
+    text-align: center;
+    justify-content: center;
+}
+
+.precioFinal{
+    color: white;
+    font-size: 95%;
+}
 
 @media(min-width:361px){
+
+    
 
     .tituloCaracteristicas{
         font-size: 90%;
@@ -497,6 +570,18 @@ div div.lugarCategorias li a{
 }
 
 @media(min-width:550px){
+
+    .prodCarrito{
+        max-height: 50vh;
+        max-width: 50vw;
+    }
+
+
+    .cantidad{
+        margin-bottom: 10%;
+    }
+
+
 
     .botonMercado{
         font-size: 95%;
@@ -686,6 +771,22 @@ div div.lugarCategorias li a{
 
 
 @media(min-width:1300px){
+
+    .textos{
+        width: 23vw;
+    }
+
+    .contTalla{
+        width: 30%;
+     }
+
+     .textoDetalle{
+        margin-bottom: 12%;
+     }
+
+     .precioFinal{
+        margin-bottom: 12%;
+     }
 
     .caracteristicas{
         margin-right: -10%;
