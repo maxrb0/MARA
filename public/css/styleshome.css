@@ -8,6 +8,7 @@
     font-family:'Segoe UI';
 }
 
+
 body{  
     background-color: rgb(150, 175, 194);
     position: relative;
@@ -29,7 +30,8 @@ body{
     font-size: 120%;
     text-align: center;
     margin: 5px;
-    margin-top: 10px;
+    margin-top: 2%;
+    margin-bottom: 1%;
 }
 
 .contDetalle{
@@ -114,26 +116,38 @@ body{
     color: white;
     font-size: 100%;
     text-align: center;
-    margin: auto;
+    margin-left: 34%;
+    margin-bottom: 9%;
 }
 
 
+.imagenesCamisetas{
+    display: flex;
+    flex-direction: column;
+}
+
 .bodyimagenes{
     display: flex;
-    flex-direction: row; 
+    flex-wrap: wrap;
+    max-width: 100vw;
     background-color: #192436;
     margin-bottom: 25px;
     border-radius: 10px;
-    padding-bottom: 4%;
+    padding-bottom: 2%;
     padding-top: 2%;
+    margin: auto;
+}
+
+div.imagenesCamisetas div article {
+   max-width: 45%;
+   margin-top: 5%;
+   
 }
 
 div article img{
     display: flex;
     width: 70%;
-    margin: auto;
-    margin-bottom: 5%;
-    margin-top: 10%;
+    margin-left: 30%;    
 }
 
 
@@ -329,70 +343,15 @@ div div.lugarCategorias li a{
 
 
 
-.real img{
-    border-radius: 18px;
-}
-.barca img {
-    border-radius: 18px;
-}
-.atletico img {
-    border-radius: 18px;
-}
-.liverpool img {
-    border-radius: 18px;
-}
-.city img {
-    border-radius: 18px;
-}
-.chelsea img {
-    border-radius: 18px;
-}
-.argentina img {
-    border-radius: 18px;
-}
-.colombia img {
-    border-radius: 18px;
-}
-.brasil img {
-    border-radius: 18px;
-}
-.millonarios img {
-    border-radius: 18px;
-}
-.junior img {
-    border-radius: 18px;
-}
-.nacional img {
-    border-radius: 18px;
-}
-.boca img {
-    border-radius: 18px;
-}
-.river img {
-    border-radius: 18px;
-}
-.racing img {
+div.imagenesCamisetas div article a img{
     border-radius: 18px;
 }
 
-.capa{
+
+div.imagenesCamisetas div article a div{
     display: none;
  }
- .atletico{
-    display: none;
- }
- .chelsea{
-    display: none;
- }
- .brasil{
-    display: none;
- }
- .nacional{
-    display: none;
- }
- .racing{
-    display: none;
- }
+
 
  .loginForm{
     display: flex;
@@ -541,9 +500,19 @@ div div.lugarCategorias li a{
     font-size: 95%;
 }
 
-@media(min-width:361px){
 
-    
+
+
+
+@media(min-width:380px){
+    .titulosCamisetas{
+        margin-left: 23%;
+    }
+
+    div article img{
+        width: 90%;
+        margin-left: 15%;    
+    }
 
     .tituloCaracteristicas{
         font-size: 90%;
@@ -636,7 +605,20 @@ div div.lugarCategorias li a{
 
 
 
+
+
 @media(min-width:754px){
+
+    .titulosCamisetas{
+        font-size: 130%;
+        margin-left: 23%;
+
+    }
+
+    div article img{
+        width: 90%;
+        margin-left: 16%;  
+    }
 
     .caracteristicas{
         margin-right: 4%;
@@ -695,7 +677,35 @@ div div.lugarCategorias li a{
 }  
 
 
+
 @media(min-width:1000px){
+
+    .bodyimagenes{
+        padding-top: 6%;
+    }
+
+    .titulosCamisetas{
+        font-size: 120%;
+        margin-left: 18%;
+    }
+    
+
+    .bodyimagenes{
+        padding-right: 6%;
+    }
+
+    div.imagenesCamisetas div article {
+        max-width: 33%;
+        margin: auto;
+     }
+
+
+    div article img{
+        width: 85%;
+        margin-left: 15%;    
+    }
+
+   
 
     .botonMercado{
         font-size: 105%;
