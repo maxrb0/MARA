@@ -1,0 +1,20 @@
+[
+ {
+  "id": 1,
+  "name": "Real Madrid",
+  "price": "15.000",
+  "category": "La liga",
+  "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
+  "image": "",
+  "imageBack": ""
+ },
+{ 
+  "id": 2,
+  "name": "Cafetera Moulinex Dolce Gusto Edited",
+  "price": "1000",
+  "discount": "50",
+  "category": "visited",
+  "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+  "image": "img-cafetera-moulinex.jpg"
+}
+]

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("./partials/head.ejs")%>
+</head>
+<body>
+    <header>
+        <%- include ("./partials/header.ejs")%>
+    </header>
+    <main class="register">
+
+        <div class="fondo">
+
+        <h2 class="titulosForm">Edita tu producto</h2>
+        
+        <form class="formSignup" action="/" method="POST">
+            <label class="titulosForm" for="info-personal"><b>Información Del Producto</b></label>
+
+      
+            <label class="titulosForm" for="category" >Liga Del equipo:</label>   
+            <select name="category" id="category" class="textos">
+                <option value="">Liga</option>
+                <option value="la liga">La liga</option>
+                <option value="visited">Premier League</option>
+                <option value="la liga">Serie A</option>
+                <option value="visited">Primera Division Argentina </option>
+                <option value="la liga">Primera Division Colombiana</option>
+                <option value="visited">Selecciones Mundiales </option>
+                <option value="visited">MLS </option>
+            </select>
+
+
+           
+            <label class="titulosForm" for="name" >Nombre Camiseta:</label>
+            <input class="textos" type="text" id="name" name="nameCamiseta" placeholder="Inserte Nombre">
+            
+            <label class="titulosForm" for="imgFrente">Imagen camiseta de frente:</label>
+            <input class="textos" type="file" id=imgFrente"" name="imagenfrente">
+
+
+            <label class="titulosForm" for="imgBack" >Imagen camiseta espalda:</label>
+            <input class="textos" type="file" id="imgBack" name="imagenback">
+
+   
+                <input class="botones" type="submit" value="Guardar">
+
+            </form>
+            </div>
+    
+        </main>
+
+<footer class="footer">
+    <%- include ("./partials/footer.ejs")%>
+</footer>
+
+</body>
+</html>
