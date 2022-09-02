@@ -39,40 +39,32 @@
      
         <div class="imagenesCamisetas">
 
+            
         <h2 class="titulos">La Liga</h2> <!-- category -->
-        <div class="bodyimagenes">
-            <article class="real" >
-                <a href="/productDetail">
-                    <img src="/design/real madrid frente.jpg" alt=""> <!-- imageFrente -->
-                    <div class="capa">
-                        <img src="/design/real madrid back.jpg" alt=""> <!-- imageBack -->
-                    </div>
-                    </a>
-                    <h2 class="titulosCamisetas">Real Madrid</h2> <!-- name -->
-            </article>
+       
+
+            <% for(let producto of La liga ) { %>
+             
+                <div class="bodyimagenes">
+                    <article class="real" >
+                        <a href="/productDetail/<%= producto.id %>">
+                            <img src="/design/<%= producto.imageFrente%>" alt=""> <!-- imageFrente -->
+                            <div class="capa">
+                                <img src="/design/<%= producto.imageBack%>" alt=""> <!-- imageBack -->
+                            </div>
+                            </a>
+                            <h2 class="titulosCamisetas"><%= producto.name%></h2> <!-- name -->
+                    </article>
+                </div>
+                 
+                <% } %>
 
 
-            <article class="barca" >
-                <a href="/productDetail">
-                    <img src="/design/barca frente.jpg" alt="">
-                    <div class="capa">
-                        <img src="/design/barca back.jpg" alt="">
-                    </div>
-                    </a>
-                    <h2 class="titulosCamisetas">Barcelona</h2>
-            </article>
 
-            <article class="atletico" >
-                <a href="/productDetail">
-                    <img src="/design/atletico frente si.jpg" alt="">
-                    <div class="capa">
-                        <img src="/design/atletico back.jpg" alt="">
-                    </div>
-                    </a>
-                    <h2 class="titulosCamisetas">Atletico de Madrid</h2>
-            </article>
 
-        </div>
+            
+
+        
 
 
 
