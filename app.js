@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 
 
 app.use("/", indexRouter);
-app.use("/", userRouter);
+app.use("/user", userRouter);
 
 
 

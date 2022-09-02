@@ -25,19 +25,19 @@
             <div class="detalleProducto">
             <h1 class="tituloDetalle">Detalle Del Producto</h1>
                 <div class="imgProducto">
-                    <img class="prodReal" src="/design/real madrid frente.jpg" alt="Camiseta">
-                    <img class="prodReal" src="/design/real madrid back.jpg" alt="Camiseta">
+                    <img class="prodReal" src="/design/<%= productos.imageFrente %>" alt="Camiseta">
+                    <img class="prodReal" src="/design/<%= productos.imageBack %>" alt="Camiseta">
                 </div>
 
-            <h2 class="textoDetalle">Real Madrid Camiseta Titular Blanca 2022 2023</h2>
-            <h2 class="textoDetalle">$15.000</h2>
+            <h2 class="textoDetalle"><%= productos.name %></h2>
+            <h2 class="textoDetalle"><%= productos.price %></h2>
                 <button class="botonMercado" type="submit" value="Comprar"><i class="fa fa-shopping-cart"></i></button>
             </div>
 
                 <div class="caracteristicas">
                 <h2 class="tituloCaracteristicas">Caracteristicas</h2>
 
-                <p class="carateristicasCamisetas">Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.</p>
+                <p class="carateristicasCamisetas"><%= productos.description %></p>
                 </div>
         </div>
     

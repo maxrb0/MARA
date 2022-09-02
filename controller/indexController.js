@@ -21,17 +21,26 @@ const indexController = {
             PrimeraDivisionColombiana: PrimeraDivisionColombiana,
             PrimeraDivisionArgentina: PrimeraDivisionArgentina
           });
+
     },
     cart:(req,res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         res.render("productCart")
     },
+
     detail:(req,res)=>{
-        res.render("productDetail")
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        const ID = products.find(product => product.id  == req.params.id);
+        res.render("productDetail", {productos: ID});
     },
+
     crea:(req,res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         res.render("crea")
     },
+    
     edit:(req,res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         res.render("edit")
     },
     
