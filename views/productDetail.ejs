@@ -24,14 +24,20 @@
         <div class="contDetalle">
             <div class="detalleProducto">
             <h1 class="tituloDetalle">Detalle Del Producto</h1>
+
+            <h2 class="textoDetalle"><%= productos.name %></h2>
                 <div class="imgProducto">
                     <img class="prodReal" src="/design/<%= productos.imageFrente %>" alt="Camiseta">
                     <img class="prodReal" src="/design/<%= productos.imageBack %>" alt="Camiseta">
                 </div>
-
-            <h2 class="textoDetalle"><%= productos.name %></h2>
+            <div>
+            <h2 class="textoDetalle">Precio</h2>
             <h2 class="textoDetalle"><%= productos.price %></h2>
+        </div>
+            <div>
                 <button class="botonMercado" type="submit" value="Comprar"><i class="fa fa-shopping-cart"></i></button>
+                <button class="botonMercado" type="submit" value="Comprar">Compra</button>
+            </div>
             </div>
 
                 <div class="caracteristicas">

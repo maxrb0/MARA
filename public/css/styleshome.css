@@ -552,7 +552,8 @@ div.imagenesCamisetas div article a div{
 
 
     .botonMercado{
-        font-size: 95%;
+        font-size: 90%;
+        max-width: fit-content;
     }
 
     .caracteristicas{
@@ -790,7 +791,7 @@ div.imagenesCamisetas div article a div{
      }
 
      .textoDetalle{
-        margin-bottom: 12%;
+        margin-bottom: 1%;
      }
 
      .precioFinal{
