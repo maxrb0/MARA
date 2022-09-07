@@ -43,10 +43,10 @@ const indexController = {
 
         const productNew = {
             id: Date.now(),
-            name: req.body.name,
-            price: req.body.price,
+            name: req.body.nameCamiseta,
+            price: req.body.priceCamiseta,
             category: req.body.category,
-            description: req.body.description,
+            description: req.body.descriptonCamiseta,
             imageFrente: "image-default.png",
             imageBack: "image-default.png"
         };
@@ -68,6 +68,30 @@ const indexController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         res.render("edit")
     },
+
+    update: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        console.log(req.body);
+        console.log(req.params.id);
+
+        products.forEach((p) => {
+            if (p.id == req.params.id) {
+                p.name = req.body.name;
+                p.price = req.body.price;
+                p.discount = req.body.discount;
+                p.description = req.body.description;
+            }
+        });
+
+        const data = JSON.stringify(products, null, ' ');
+        fs.writeFileSync(productsFilePath, data);
+
+        res.redirect("/productDetail/" + req.params.id);
+    },
+
+
+
+
 
     delete:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));

@@ -13,20 +13,20 @@
 
         <h2 class="titulosForm">Crea tu producto</h2>
         
-        <form class="formSignup" action="/" method="POST">
+        <form class="formSignup" action="/" method="POST" enctype="multipart/form-data">
             <label class="titulosForm" for="info-personal"><b>Información Del Producto</b></label>
 
       
             <label class="titulosForm" for="category" >Liga Del equipo:</label>   
-            <select name="category" id="category" class="textos">
-                <option value="">Liga</option>
-                <option value="la liga">La liga</option>
-                <option value="visited">Premier League</option>
-                <option value="la liga">Serie A</option>
-                <option value="visited">Primera Division Argentina </option>
-                <option value="la liga">Primera Division Colombiana</option>
-                <option value="visited">Selecciones Mundiales </option>
-                <option value="visited">MLS </option>
+            <select name="category" id="category" class="textos" placeholder="Seleccionar Torneo">
+                <!-- Agregar opccion liga despues de la validación -->
+                <option value="La liga">La Liga</option>
+                <option value="Premier League">Premier League</option>
+                <option value="Serie A">Serie A</option>
+                <option value="Primera Division Argentina">Primera Division Argentina </option>
+                <option value="Primera Division Colombiana">Primera Division Colombiana</option>
+                <option value="Selecciones Mundiales">Selecciones Mundiales </option>
+                <option value="MLS">MLS </option>
             </select>
 
 
@@ -35,14 +35,14 @@
             <input class="textos" type="text" id="name" name="nameCamiseta" placeholder=" Nombre">
            
             <label class="titulosForm" for="name" >Caracteristicas:</label>
-            <input class="textos" type="text" id="name" name="nameCamiseta" placeholder="Caracteristicas">
+            <input class="textos" type="text" id="name" name="descriptonCamiseta" placeholder="Caracteristicas">
 
             <label class="titulosForm" for="name" >Precio:</label>
-            <input class="textos" type="text" id="name" name="nameCamiseta" placeholder="Precio">
+            <input class="textos" type="text" id="name" name="priceCamiseta" placeholder="Precio">
 
             
             <label class="titulosForm" for="imgFrente">Imagen camiseta de frente:</label>
-            <input class="textos" type="file" id=imgFrente"" name="imagenfrente">
+            <input class="textos" type="file" id="imgFrente" name="imagenfrente">
 
 
             <label class="titulosForm" for="imgBack" >Imagen camiseta espalda:</label>

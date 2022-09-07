@@ -1,137 +1,179 @@
 [
  {
-    "id": 1,
-    "name": "Real Madrid",
-    "price": "15.000",
-    "category": "La liga",
-    "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "real madrid frente.jpg",
-    "imageBack": "real madrid back.jpg"
+  "id": 1,
+  "name": "Real Madrid",
+  "price": "15.000",
+  "category": "La liga",
+  "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "real madrid frente.jpg",
+  "imageBack": "real madrid back.jpg"
  },
-{ 
-    "id": 2,
-    "name": "Barcelona",
-    "price": "15.500",
-    "category": "La liga",
-    "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "barca frente.jpg",
-    "imageBack": "barca back.jpg"
-},
-{ 
-    "id": 3,
-    "name": "Atletico de Madrid",
-    "price": "15.100",
-    "category": "La liga",
-    "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "atletico frente si.jpg",
-    "imageBack": "atletico back.jpg"
-},
-{ 
-    "id": 4,
-    "name": "Liverpool",
-    "price": "15.000",
-    "category": "Premier League",
-    "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "liverpool frente.jpg",
-    "imageBack": "liverpool back.jpg"
-},
-{ 
-    "id": 5,
-    "name": "Manchester City",
-    "price": "15.000",
-    "category": "Premier League",
-    "description": "Camiseta marca Puma, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "city frente.jpg",
-    "imageBack": "city back.jpg"
-},
-{ 
-    "id": 6,
-    "name": "Chelsea",
-    "price": "15.000",
-    "category": "Premier League",
-    "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "chelsea frente.jpg",
-    "imageBack": "chelsea back.jpg"
-},
-{ 
-    "id": 7,
-    "name": "Argentina",
-    "price": "20.000",
-    "category": "Selecciones Del Mundo",
-    "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "argentina frente.jpg",
-    "imageBack": "argentina back.jpg"
-},
-{ 
-    "id": 8,
-    "name": "Colombia",
-    "price": "20.000",
-    "category": "Selecciones Del Mundo",
-    "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "colombia frente si.webp",
-    "imageBack": "colombia back.webp"
-},
-{ 
-    "id": 9,
-    "name": "Brasil",
-    "price": "20.000",
-    "category": "Selecciones Del Mundo",
-    "description": "Camiseta marca Brasil, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "brasil frente.jpg",
-    "imageBack": "brasil back.jpg"
-},
-{ 
-    "id": 10,
-    "name": "Millonarios",
-    "price": "15.000",
-    "category": "Primera Division Colombiana",
-    "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "millonarios frente.jpg",
-    "imageBack": "millonarios back.jpg"
-},
-{ 
-    "id": 11,
-    "name": "Junior",
-    "price": "15.000",
-    "category": "Primera Division Colombiana",
-    "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "junior frente.jpg",
-    "imageBack": "junior back.jpg"
-},
-{ 
-    "id": 12,
-    "name": "Nacional",
-    "price": "15.000",
-    "category": "Primera Division Colombiana",
-    "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "nacional frente.jpg",
-    "imageBack": "nacional back.jpg"
-},
-{ 
-    "id": 13,
-    "name": "Boca Juniors",
-    "price": "15.000",
-    "category": "Primera Division Argentina",
-    "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "boca frente.jpg",
-    "imageBack": "boca back.jpg"
-},
-{ 
-    "id": 14,
-    "name": "River Plate",
-    "price": "15.000",
-    "category": "Primera Division Argentina",
-    "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "river frente.jpg",
-    "imageBack": "river back.jpg"
-},
-{ 
-    "id": 15,
-    "name": "Racing",
-    "price": "15.000",
-    "category": "Primera Division Argentina",
-    "description": "Camiseta marca Kappa, manga corta, tela antitranspirante sin numeración.",
-    "imageFrente": "racing frente.jpg",
-    "imageBack": "racing back.jpg"
-}
+ {
+  "id": 2,
+  "name": "Barcelona",
+  "price": "15.500",
+  "category": "La liga",
+  "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "barca frente.jpg",
+  "imageBack": "barca back.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Atletico de Madrid",
+  "price": "15.100",
+  "category": "La liga",
+  "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "atletico frente si.jpg",
+  "imageBack": "atletico back.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Liverpool",
+  "price": "15.000",
+  "category": "Premier League",
+  "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "liverpool frente.jpg",
+  "imageBack": "liverpool back.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Manchester City",
+  "price": "15.000",
+  "category": "Premier League",
+  "description": "Camiseta marca Puma, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "city frente.jpg",
+  "imageBack": "city back.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Chelsea",
+  "price": "15.000",
+  "category": "Premier League",
+  "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "chelsea frente.jpg",
+  "imageBack": "chelsea back.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Argentina",
+  "price": "20.000",
+  "category": "Selecciones Del Mundo",
+  "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "argentina frente.jpg",
+  "imageBack": "argentina back.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Colombia",
+  "price": "20.000",
+  "category": "Selecciones Del Mundo",
+  "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "colombia frente si.webp",
+  "imageBack": "colombia back.webp"
+ },
+ {
+  "id": 9,
+  "name": "Brasil",
+  "price": "20.000",
+  "category": "Selecciones Del Mundo",
+  "description": "Camiseta marca Brasil, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "brasil frente.jpg",
+  "imageBack": "brasil back.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Millonarios",
+  "price": "15.000",
+  "category": "Primera Division Colombiana",
+  "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "millonarios frente.jpg",
+  "imageBack": "millonarios back.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Junior",
+  "price": "15.000",
+  "category": "Primera Division Colombiana",
+  "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "junior frente.jpg",
+  "imageBack": "junior back.jpg"
+ },
+ {
+  "id": 12,
+  "name": "Nacional",
+  "price": "15.000",
+  "category": "Primera Division Colombiana",
+  "description": "Camiseta marca Nike, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "nacional frente.jpg",
+  "imageBack": "nacional back.jpg"
+ },
+ {
+  "id": 13,
+  "name": "Boca Juniors",
+  "price": "15.000",
+  "category": "Primera Division Argentina",
+  "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "boca frente.jpg",
+  "imageBack": "boca back.jpg"
+ },
+ {
+  "id": 14,
+  "name": "River Plate",
+  "price": "15.000",
+  "category": "Primera Division Argentina",
+  "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "river frente.jpg",
+  "imageBack": "river back.jpg"
+ },
+ {
+  "id": 15,
+  "name": "Racing",
+  "price": "15.000",
+  "category": "Primera Division Argentina",
+  "description": "Camiseta marca Kappa, manga corta, tela antitranspirante sin numeración.",
+  "imageFrente": "racing frente.jpg",
+  "imageBack": "racing back.jpg"
+ },
+ {
+  "id": 1662521359389,
+  "name": "Prueba Creacion y editar",
+  "price": "100000",
+  "category": "La liga",
+  "description": "para la prueba",
+  "imageFrente": "image-default.png",
+  "imageBack": "image-default.png"
+ },
+ {
+  "id": 1662521904754,
+  "name": [
+   "Ya lo editamos",
+   "sirvio?",
+   "50000"
+  ],
+  "category": "",
+  "imageFrente": "image-default.png",
+  "imageBack": "image-default.png"
+ },
+ {
+  "id": 1662522073627,
+  "name": [
+   "editado",
+   "sirve?",
+   "50000"
+  ],
+  "category": "",
+  "imageFrente": "image-default.png",
+  "imageBack": "image-default.png"
+ },
+ {
+  "id": 1662522267051,
+  "name": [
+   "editar",
+   "dsadasdsa",
+   "5000"
+  ],
+  "category": "",
+  "imageFrente": "image-default.png",
+  "imageBack": "image-default.png"
+ }
 ]
