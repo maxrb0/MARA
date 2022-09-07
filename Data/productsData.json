@@ -135,11 +135,11 @@
   "imageBack": "racing back.jpg"
  },
  {
-  "id": 1662521359389,
-  "name": "Prueba Creacion y editar",
-  "price": "100000",
+  "id": 1662528038471,
+  "name": "Producto editado2",
+  "price": "111",
   "category": "La liga",
-  "description": "para la prueba",
+  "description": "sirvio si",
   "imageFrente": "image-default.png",
   "imageBack": "image-default.png"
  }

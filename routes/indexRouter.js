@@ -35,12 +35,12 @@ router.get("/productDetail/:id",indexController.detail);
 
 //muestra el crear producto
 router.get("/crea",indexController.crea);
-router.post("/", indexController.store);
+router.post("/", uploadImg.single("fotoProducto"), indexController.store);
 
 
 //muestra el editar producto
 router.get("/edit/:id",indexController.edit);
-router.put("/edit/:id" ,indexController.update);
+router.put("/edit/:id", uploadImg.single("fotoProducto"), indexController.update);
 
 
 

@@ -37,7 +37,6 @@ const indexController = {
     },
 
     crea:(req,res)=>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         res.render("crea")
     },
 
@@ -53,7 +52,8 @@ const indexController = {
             imageBack: "image-default.png"
         };
 
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+    
 
         products.push(productNew);
 
@@ -68,7 +68,9 @@ const indexController = {
     
     edit:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        res.render("edit")
+        const productoToEdit = products.find((p) => p.id == req.params.id);
+
+        res.render("edit", { pToEdit: productoToEdit });
     },
 
     update: (req, res) => {
@@ -85,6 +87,7 @@ const indexController = {
                 // p.imageBack =  "image-default.png"
             }
         });
+
 
         const data = JSON.stringify(products, null, ' ');
         fs.writeFileSync(productsFilePath, data);

@@ -13,31 +13,31 @@
 
         <h2 class="titulosForm">Edita tu producto</h2>
         
-        <form class="formSignup" action="edit?_method=PUT" method="POST" enctype="multipart/form-data" >
+        <form class="formSignup" action="/edit/<%=pToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
             <label class="titulosForm" for="info-personal"><b>Información Del Producto</b></label>
 
       
             <label class="titulosForm" for="category" >Liga Del equipo:</label>   
             <select name="category" id="category" class="textos">
                 <option value="">Liga</option>
-                <option value="La liga" <%= (productToEdit.category == "La liga")? "selected":"" %>>La liga</option>
-                <option value="Premier League" <%= (productToEdit.category == "Premier League")? "selected":"" %> >Premier League</option>
-                <option value="Serie A" <%= (productToEdit.category == "Serie A")? "selected":"" %> >Serie A</option>
-                <option value="Primera Division Argentina" <%= (productToEdit.category == "Primera Division Argentina ")? "selected":"" %> >Primera Division Argentina </option>
-                <option value="Primera Division Colombiana" <%= (productToEdit.category == "Primera Division Colombiana")? "selected":"" %> >Primera Division Colombiana</option>
-                <option value="Selecciones Mundiales" <%= (productToEdit.category == "Selecciones Mundiales")? "selected":"" %> >Selecciones Mundiales </option>
-                <option value="MLS" <%= (productToEdit.category == "MLS")? "selected":"" %> >MLS </option>
+                <option value="La liga" <%= (pToEdit.category == "La liga")? "selected":"" %>>La liga</option>
+                <option value="Premier League" <%= (pToEdit.category == "Premier League")? "selected":"" %> >Premier League</option>
+                <option value="Serie A" <%= (pToEdit.category == "Serie A")? "selected":"" %> >Serie A</option>
+                <option value="Primera Division Argentina" <%= (pToEdit.category == "Primera Division Argentina ")? "selected":"" %> >Primera Division Argentina </option>
+                <option value="Primera Division Colombiana" <%= (pToEdit.category == "Primera Division Colombiana")? "selected":"" %> >Primera Division Colombiana</option>
+                <option value="Selecciones Mundiales" <%= (pToEdit.category == "Selecciones Mundiales")? "selected":"" %> >Selecciones Mundiales </option>
+                <option value="MLS" <%= (pToEdit.category == "MLS")? "selected":"" %> >MLS </option>
             </select>
 
 
             <label class="titulosForm" for="name" >Nombre Camiseta:</label>
-            <input class="textos" type="text" id="name" name="nameCamiseta" placeholder=" Nombre">
+            <input class="textos" type="text" id="name" name="nameCamiseta" value="<%=pToEdit.name%>">
            
             <label class="titulosForm" for="name" >Caracteristicas:</label>
-            <input class="textos" type="text" id="name" name="descriptonCamiseta" placeholder="Caracteristicas">
+            <input class="textos" type="text" id="description" name="descriptonCamiseta" value="<%=pToEdit.description%>">
 
             <label class="titulosForm" for="name" >Precio:</label>
-            <input class="textos" type="text" id="name" name="priceCamiseta" placeholder="Precio">
+            <input class="textos" type="text" id="price" name="priceCamiseta" value="<%=pToEdit.price%>">
 
             
             <label class="titulosForm" for="imgFrente">Imagen camiseta de frente:</label>
