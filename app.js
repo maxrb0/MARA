@@ -40,6 +40,6 @@ app.use(express.static(path.join(__dirname,'/public')));
 
 
 app.listen(3030, ()=>{
-    console.log('Servidor funcionando');
+    console.log('Servidor funcionando en el puerto 3030');
 });
 
