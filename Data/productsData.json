@@ -114,7 +114,7 @@
     "category": "Primera Division Argentina",
     "description": "Camiseta marca Adidas, manga corta, tela antitranspirante sin numeración.",
     "imageFrente": "boca frente.jpg",
-    "imageBack": "public/design/boca back.jpg"
+    "imageBack": "boca back.jpg"
 },
 { 
     "id": 14,
@@ -132,6 +132,6 @@
     "category": "Primera Division Argentina",
     "description": "Camiseta marca Kappa, manga corta, tela antitranspirante sin numeración.",
     "imageFrente": "racing frente.jpg",
-    "imageBack": "river back.jpg"
+    "imageBack": "racing back.jpg"
 }
 ]

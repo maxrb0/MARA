@@ -38,10 +38,40 @@ const indexController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         res.render("crea")
     },
+
+    store: (req, res) => {
+
+        const productNew = {
+            id: Date.now(),
+            name: req.body.name,
+            price: req.body.price,
+            category: req.body.category,
+            description: req.body.description,
+            imageFrente: "image-default.png",
+            imageBack: "image-default.png"
+        };
+
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+        products.push(productNew);
+
+        const data = JSON.stringify(products, null, ' ');
+        fs.writeFileSync(productsFilePath, data);
+
+        res.redirect("/");
+    },
+
+
+
     
     edit:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         res.render("edit")
+    },
+
+    delete:(req,res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        res.redirect("home")
     },
     
 };
