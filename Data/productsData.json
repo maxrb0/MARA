@@ -142,38 +142,5 @@
   "description": "para la prueba",
   "imageFrente": "image-default.png",
   "imageBack": "image-default.png"
- },
- {
-  "id": 1662521904754,
-  "name": [
-   "Ya lo editamos",
-   "sirvio?",
-   "50000"
-  ],
-  "category": "",
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
- },
- {
-  "id": 1662522073627,
-  "name": [
-   "editado",
-   "sirve?",
-   "50000"
-  ],
-  "category": "",
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
- },
- {
-  "id": 1662522267051,
-  "name": [
-   "editar",
-   "dsadasdsa",
-   "5000"
-  ],
-  "category": "",
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
  }
 ]

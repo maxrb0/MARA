@@ -13,20 +13,20 @@
 
         <h2 class="titulosForm">Edita tu producto</h2>
         
-        <form class="formSignup" action="/" method="POST" enctype="multipart/form-data" >
+        <form class="formSignup" action="edit?_method=PUT" method="POST" enctype="multipart/form-data" >
             <label class="titulosForm" for="info-personal"><b>Información Del Producto</b></label>
 
       
             <label class="titulosForm" for="category" >Liga Del equipo:</label>   
             <select name="category" id="category" class="textos">
                 <option value="">Liga</option>
-                <option value="la liga">La liga</option>
-                <option value="visited">Premier League</option>
-                <option value="la liga">Serie A</option>
-                <option value="visited">Primera Division Argentina </option>
-                <option value="la liga">Primera Division Colombiana</option>
-                <option value="visited">Selecciones Mundiales </option>
-                <option value="visited">MLS </option>
+                <option value="La liga" <%= (productToEdit.category == "La liga")? "selected":"" %>>La liga</option>
+                <option value="Premier League" <%= (productToEdit.category == "Premier League")? "selected":"" %> >Premier League</option>
+                <option value="Serie A" <%= (productToEdit.category == "Serie A")? "selected":"" %> >Serie A</option>
+                <option value="Primera Division Argentina" <%= (productToEdit.category == "Primera Division Argentina ")? "selected":"" %> >Primera Division Argentina </option>
+                <option value="Primera Division Colombiana" <%= (productToEdit.category == "Primera Division Colombiana")? "selected":"" %> >Primera Division Colombiana</option>
+                <option value="Selecciones Mundiales" <%= (productToEdit.category == "Selecciones Mundiales")? "selected":"" %> >Selecciones Mundiales </option>
+                <option value="MLS" <%= (productToEdit.category == "MLS")? "selected":"" %> >MLS </option>
             </select>
 
 
@@ -34,10 +34,10 @@
             <input class="textos" type="text" id="name" name="nameCamiseta" placeholder=" Nombre">
            
             <label class="titulosForm" for="name" >Caracteristicas:</label>
-            <input class="textos" type="text" id="name" name="nameCamiseta" placeholder="Caracteristicas">
+            <input class="textos" type="text" id="name" name="descriptonCamiseta" placeholder="Caracteristicas">
 
             <label class="titulosForm" for="name" >Precio:</label>
-            <input class="textos" type="text" id="name" name="nameCamiseta" placeholder="Precio">
+            <input class="textos" type="text" id="name" name="priceCamiseta" placeholder="Precio">
 
             
             <label class="titulosForm" for="imgFrente">Imagen camiseta de frente:</label>

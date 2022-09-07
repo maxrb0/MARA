@@ -1,7 +1,9 @@
 const fs = require("fs");
 const path = require("path");
+const { CLIENT_RENEG_LIMIT } = require("tls");
 
 const productsFilePath = path.join(__dirname, "../Data/productsData.json");
+const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const indexController = {
     home:(req,res)=>{
@@ -71,20 +73,23 @@ const indexController = {
 
     update: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        console.log(req.body);
-        console.log(req.params.id);
+
 
         products.forEach((p) => {
             if (p.id == req.params.id) {
-                p.name = req.body.name;
-                p.price = req.body.price;
-                p.discount = req.body.discount;
-                p.description = req.body.description;
+                p.name =   req.body.nameCamiseta,
+                p.price = req.body.priceCamiseta,
+                p.category =  req.body.category,
+                p.description =  req.body.descriptonCamiseta
+                // p.imageFrente =  "image-default.png",
+                // p.imageBack =  "image-default.png"
             }
         });
 
         const data = JSON.stringify(products, null, ' ');
         fs.writeFileSync(productsFilePath, data);
+
+         console.log(req.params.id)
 
         res.redirect("/productDetail/" + req.params.id);
     },
