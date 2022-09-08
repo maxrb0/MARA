@@ -498,7 +498,15 @@ div.imagenesCamisetas div article a div{
     color: white;
     font-size: 95%;
 }
+.contRecordar{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
 
+.botonRecordar{
+    margin-bottom: 10px;
+}
 
 
 
