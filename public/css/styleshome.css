@@ -243,6 +243,7 @@ div article img{
     border-radius: 5px;
     width: fit-content;
     height: max-content;
+    margin-left: 20px;
 }
 
 .barra{
@@ -384,6 +385,7 @@ div.imagenesCamisetas div article a div{
 .botones{
     max-width: 50px;
     margin: auto;
+
 }
 
 .titulosForm{
@@ -653,6 +655,8 @@ div.imagenesCamisetas div article a div{
     }
     
     .botones{
+        padding: 1%;
+        margin-bottom: 5px;
         transition: background 0.5s; 
     }
     
