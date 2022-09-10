@@ -59,6 +59,11 @@ body{
 }
 
 
+#botonCompra{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
 .botonMercado{
     transition: background 0.5s; 
 }
@@ -475,7 +480,12 @@ div.imagenesCamisetas div article a div{
     text-align: center;
  }
  
+ .contenedorBotones{
+    display: flex;
+    justify-content: space-between;
+ }
  .basurita{
+    display: flex;
     color: white;
     margin: auto;
  }
