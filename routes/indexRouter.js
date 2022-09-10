@@ -26,11 +26,11 @@ router.get("/",indexController.home);
 
 
 //Muestra el carrito de productos
-router.get("/productCart",indexController.cart);
+router.get("/product-cart",indexController.cart);
 
 
 //Mustra el detalle de producto
-router.get("/productDetail/:id",indexController.detail);
+router.get("/product-detail/:id",indexController.detail);
 
 
 //muestra el crear producto
