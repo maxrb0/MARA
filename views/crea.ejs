@@ -9,11 +9,11 @@
     </header>
     <main class="register">
 
-        <div class="fondo">
+    <div class="fondo">
 
         <h2 class="titulosForm">Crea tu producto</h2>
         
-        <form class="formSignup" action="/" method="POST" enctype="multipart/form-data">
+        <form class="formSignup" action="/indexRouter/crea" method="POST" enctype="multipart/form-data">
             <label class="titulosForm" for="info-personal"><b>Información Del Producto</b></label>
 
       
@@ -42,17 +42,17 @@
 
             
             <label class="titulosForm" for="imgFrente">Imagen camiseta de frente:</label>
-            <input class="textos" type="file" id="imgFrente" name="imagenfrente">
+            <input class="textos" type="file" id="imgFrente" name="imagefrente">
 
 
             <label class="titulosForm" for="imgBack" >Imagen camiseta espalda:</label>
-            <input class="textos" type="file" id="imgBack" name="imagenback">
+            <input class="textos" type="file" id="imgBack" name="imageback">
 
-   
-                <input class="botones" type="submit" value="Guardar">
+            <button class="botones" type="submit">Guardar</button>
 
-            </form>
-            </div>
+        </form>
+
+    </div>
     
         </main>
 
