@@ -385,6 +385,7 @@ div.imagenesCamisetas div article a div{
 .botones{
     max-width: 50px;
     margin: auto;
+
 }
 
 .titulosForm{
@@ -654,6 +655,8 @@ div.imagenesCamisetas div article a div{
     }
     
     .botones{
+        padding: 1%;
+        margin-bottom: 5px;
         transition: background 0.5s; 
     }
     
