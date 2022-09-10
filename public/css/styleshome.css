@@ -243,6 +243,7 @@ div article img{
     border-radius: 5px;
     width: fit-content;
     height: max-content;
+    margin-left: 20px;
 }
 
 .barra{
