@@ -135,37 +135,12 @@
   "imageBack": "racing back.jpg"
  },
  {
-  "id": 1662528038471,
-  "name": "Prueba de producto editable",
-  "price": "50000",
-  "category": "Premier League",
-  "description": "sirvioooooooo, por fiiiiiiiiiiiiiiiiiiin ",
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
- },
- {
-  "id": 1662660094077,
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
- },
- {
-  "id": 1662660098248,
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
- },
- {
-  "id": 1662660146140,
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
- },
- {
-  "id": 1662660149253,
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
- },
- {
-  "id": 1662660722643,
-  "imageFrente": "image-default.png",
-  "imageBack": "image-default.png"
+  "id": 1662702980730,
+  "name": "Barcelona Suplente",
+  "price": "100000",
+  "category": "La liga",
+  "description": "Camiseta suplende del FC Barcelona",
+  "imageFrente": "1662702980720camiseta-suplente-nike-fc-barcelona-2022-23-4.jpg",
+  "imageBack": "1662702980720camiseta-suplente-nike-fc-barcelona-2022-23-4.jpg"
  }
 ]

@@ -1,9 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const { CLIENT_RENEG_LIMIT } = require("tls");
-
 const productsFilePath = path.join(__dirname, "../Data/productsData.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const indexController = {
     home:(req,res)=>{
@@ -16,7 +15,7 @@ const indexController = {
         const PrimeraDivisionArgentina = products.filter((p) => p.category == "Primera Division Argentina");
 
         res.render("home", {
-            productos: products,
+            productos: products, toThousand,
             Laliga: laLiga,
             PremierLeague: PremierLeague,
             SeleccionesDelMundo: SeleccionesDelMundo,
@@ -27,12 +26,14 @@ const indexController = {
     },
     cart:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
         res.render("productCart")
     },
 
     detail:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        const ID = products.find(product => product.id  == req.params.id);
+
+        const ID = products.find((product) => product.id  == req.params.id);
         res.render("productDetail", {productos: ID});
     },
 
@@ -41,6 +42,8 @@ const indexController = {
     },
 
     store: (req, res) => {
+
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
         const productNew = {
             id: Date.now(),
@@ -52,15 +55,18 @@ const indexController = {
             imageBack: "image-default.png"
         };
 
-
-    
+        if (req.file) {
+            productNew.imageFrente = req.file.filename
+            productNew.imageBack = req.file.filename
+          }
+         
+          
 
         products.push(productNew);
 
-        const data = JSON.stringify(products, null, ' ');
-        fs.writeFileSync(productsFilePath, data);
-
-        res.redirect("/");
+        const data = JSON.stringify(products, null, " ");
+    fs.writeFileSync(productsFilePath, data);
+    res.redirect("/");
     },
 
 
@@ -68,14 +74,13 @@ const indexController = {
     
     edit:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        const productoToEdit = products.find((p) => p.id == req.params.id);
 
+        const productoToEdit = products.find((p) => p.id == req.params.id);
         res.render("edit", { pToEdit: productoToEdit });
     },
 
     update: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
 
         products.forEach((p) => {
             if (p.id == req.params.id) {
@@ -83,8 +88,17 @@ const indexController = {
                 p.price = req.body.priceCamiseta,
                 p.category =  req.body.category,
                 p.description =  req.body.descriptonCamiseta
-                // p.imageFrente =  "image-default.png",
-                // p.imageBack =  "image-default.png"
+            
+
+                if (req.file) {
+                    fs.unlinkSync("./public/design/" + p.imageFrente );
+                    p.imageFrente = req.file.filename
+                  }
+
+                  if (req.file) {
+                    fs.unlinkSync("./public/design/" + p.imageBack );
+                    p.imageBack = req.file.filename;
+                  }
             }
         });
 
