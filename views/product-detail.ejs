@@ -37,9 +37,12 @@
             <div class="contenedorBotones">
                 <button class="botonMercado"  type="submit" value="Comprar"><i class="fa fa-shopping-cart"></i></button>
                 <button class="botonMercado" id="botonCompra" type="submit" value="Comprar">Compra</button>
-                <div class="basurita">
-                    <button class="botonMercado" type="submit" value="Comprar"><i class="fas fa-trash"></i></button>
-                </div>
+                <form action="/product-detail/<%= productos.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <div class="basurita">
+                        <button class="botonMercado" type="submit" value="eliminar"><i class="fas fa-trash"></i></button>
+                    </div>
+                </form>
+                
             </div>
             </div>
 
