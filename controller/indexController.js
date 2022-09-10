@@ -27,13 +27,13 @@ const indexController = {
     },
     cart:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        res.render("productCart")
+        res.render("product-cart")
     },
 
     detail:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         const ID = products.find(product => product.id  == req.params.id);
-        res.render("productDetail", {productos: ID});
+        res.render("product-detail", {productos: ID});
     },
 
     crea:(req,res)=>{
@@ -94,7 +94,7 @@ const indexController = {
 
          console.log(req.params.id)
 
-        res.redirect("/productDetail/" + req.params.id);
+        res.redirect("/product-detail/" + req.params.id);
     },
 
 
