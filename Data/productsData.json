@@ -133,5 +133,14 @@
   "description": "Camiseta marca Kappa, manga corta, tela antitranspirante sin numeración.",
   "imageFrente": "racing frente.jpg",
   "imageBack": "racing back.jpg"
+ },
+ {
+  "id": 1662954604967,
+  "name": "asd",
+  "price": "1",
+  "category": "La liga",
+  "description": "asd",
+  "imageFrente": "1662954604958fronttest.jpeg",
+  "imageBack": "1662954604962backtest.jpeg"
  }
 ]

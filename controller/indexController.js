@@ -54,8 +54,8 @@ const indexController = {
         };
 
         if (req.files) {
-            productNew.imageFrente = req.files.filename
-            productNew.imageBack = req.files.filename
+            productNew.imageFrente = req.files[0].filename
+            productNew.imageBack = req.files[1].filename
         }
 
 
