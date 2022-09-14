@@ -21,7 +21,7 @@ const indexController = {
             SeleccionesDelMundo: SeleccionesDelMundo,
             PrimeraDivisionColombiana: PrimeraDivisionColombiana,
             PrimeraDivisionArgentina: PrimeraDivisionArgentina
-          });
+        });
 
     },
     cart:(req,res)=>{
@@ -53,12 +53,11 @@ const indexController = {
             imageBack: "image-default.png"
         };
 
-        if (req.file) {
-            productNew.imageFrente = req.file.filename
-            productNew.imageBack = req.file.filename
-          }
-         
-          
+        if (req.files) {
+            productNew.imageFrente = req.files[0].filename
+            productNew.imageBack = req.files[1].filename
+        }
+
 
         products.push(productNew);
 
@@ -109,13 +108,23 @@ const indexController = {
         res.redirect("/product-detail/" + req.params.id);
     },
 
-
-
-
-
     delete:(req,res)=>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        res.redirect("home")
+        let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        let producto = products.find((p) => p.id == req.params.id);
+
+        products = products.filter((p) => p.id != req.params.id);
+
+        if (producto.imageFrente != "image-default.png") {
+            fs.unlinkSync("./public/design/" + producto.imageFrente);
+        }
+        if (producto.imageBack != "image-default.png") {
+            fs.unlinkSync("./public/design/" + producto.imageBack);
+        }
+
+        let data = JSON.stringify(products, null, " ");
+        fs.writeFileSync(productsFilePath, data);
+
+        res.redirect("/")
     },
     
 };
