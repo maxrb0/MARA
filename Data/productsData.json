@@ -133,14 +133,5 @@
   "description": "Camiseta marca Kappa, manga corta, tela antitranspirante sin numeración.",
   "imageFrente": "racing frente.jpg",
   "imageBack": "racing back.jpg"
- },
- {
-  "id": 1662702980730,
-  "name": "Barcelona Suplente",
-  "price": "100000",
-  "category": "La liga",
-  "description": "Camiseta suplende del FC Barcelona",
-  "imageFrente": "1662702980720camiseta-suplente-nike-fc-barcelona-2022-23-4.jpg",
-  "imageBack": "1662702980720camiseta-suplente-nike-fc-barcelona-2022-23-4.jpg"
  }
 ]
