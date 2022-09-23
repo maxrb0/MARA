@@ -86,10 +86,13 @@ const indexController = {
                 p.category =  req.body.category,
                 p.description =  req.body.descriptonCamiseta
             
+                //hacer logica de si el usuario edita una sola imagen
 
                 if (req.file) {
                     fs.unlinkSync("./public/design/" + p.imageFrente );
-                    p.imageFrente = req.file.filename
+                    p.imageFrente = req.file.filename;
+                    // fs.unlinkSync("./public/design/" + p.imageBack );
+                    // p.imageBack = req.file.filename;
                   }
 
                   if (req.file) {
@@ -108,6 +111,9 @@ const indexController = {
         res.redirect("/product-detail/" + req.params.id);
     },
 
+
+    //Se puede usar un or (||) dentreo del if  
+      
     delete:(req,res)=>{
         let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let producto = products.find((p) => p.id == req.params.id);
