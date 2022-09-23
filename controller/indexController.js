@@ -36,7 +36,7 @@ const indexController = {
     },
 
     crea:(req,res)=>{
-        res.render("crea")
+        res.render("crea-producto")
     },
 
     store: (req, res) => {
@@ -73,7 +73,7 @@ const indexController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
         const productoToEdit = products.find((p) => p.id == req.params.id);
-        res.render("edit", { pToEdit: productoToEdit });
+        res.render("editar-producto", { pToEdit: productoToEdit });
     },
 
     update: (req, res) => {
