@@ -89,14 +89,14 @@ const indexController = {
                 //hacer logica de si el usuario edita una sola imagen
 
                 if (req.file) {
-                    fs.unlinkSync("./public/design/" + p.imageFrente );
+                    fs.unlinkSync("./public/design/products/" + p.imageFrente );
                     p.imageFrente = req.file.filename;
-                    // fs.unlinkSync("./public/design/" + p.imageBack );
+                    // fs.unlinkSync("./public/design/products/" + p.imageBack );
                     // p.imageBack = req.file.filename;
                   }
 
                   if (req.file) {
-                    fs.unlinkSync("./public/design/" + p.imageBack );
+                    fs.unlinkSync("./public/design/products/" + p.imageBack );
                     p.imageBack = req.file.filename;
                   }
             }
@@ -121,10 +121,10 @@ const indexController = {
         products = products.filter((p) => p.id != req.params.id);
 
         if (producto.imageFrente != "image-default.png") {
-            fs.unlinkSync("./public/design/" + producto.imageFrente);
+            fs.unlinkSync("./public/design/products/" + producto.imageFrente);
         }
         if (producto.imageBack != "image-default.png") {
-            fs.unlinkSync("./public/design/" + producto.imageBack);
+            fs.unlinkSync("./public/design/products/" + producto.imageBack);
         }
 
         let data = JSON.stringify(products, null, " ");
