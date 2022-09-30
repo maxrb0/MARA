@@ -177,6 +177,12 @@ div article img{
     border-radius: 6px;
 }
 
+.iconosHeader{
+    width: 6vh;
+    height: 6vh;
+}
+
+
 .iconosTop{
     display: flex;
     margin: auto;
@@ -235,6 +241,7 @@ div article img{
 
 
 .barraLupa{
+    width: 35%;
     display: flex;
     justify-content: center;
     margin: auto;
