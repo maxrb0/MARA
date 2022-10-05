@@ -36,7 +36,7 @@ const indexController = {
     },
 
     crea:(req,res)=>{
-        res.render("crea-producto")
+        res.render("crea")
     },
 
     store: (req, res) => {
@@ -73,7 +73,7 @@ const indexController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
         const productoToEdit = products.find((p) => p.id == req.params.id);
-        res.render("editar-producto", { pToEdit: productoToEdit });
+        res.render("edit", { pToEdit: productoToEdit });
     },
 
     update: (req, res) => {
@@ -86,17 +86,14 @@ const indexController = {
                 p.category =  req.body.category,
                 p.description =  req.body.descriptonCamiseta
             
-                //hacer logica de si el usuario edita una sola imagen
 
                 if (req.file) {
-                    fs.unlinkSync("./public/design/products/" + p.imageFrente );
-                    p.imageFrente = req.file.filename;
-                    // fs.unlinkSync("./public/design/products/" + p.imageBack );
-                    // p.imageBack = req.file.filename;
+                    fs.unlinkSync("./public/design/" + p.imageFrente );
+                    p.imageFrente = req.file.filename
                   }
 
                   if (req.file) {
-                    fs.unlinkSync("./public/design/products/" + p.imageBack );
+                    fs.unlinkSync("./public/design/" + p.imageBack );
                     p.imageBack = req.file.filename;
                   }
             }
@@ -111,9 +108,6 @@ const indexController = {
         res.redirect("/product-detail/" + req.params.id);
     },
 
-
-    //Se puede usar un or (||) dentreo del if  
-      
     delete:(req,res)=>{
         let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let producto = products.find((p) => p.id == req.params.id);
@@ -121,10 +115,10 @@ const indexController = {
         products = products.filter((p) => p.id != req.params.id);
 
         if (producto.imageFrente != "image-default.png") {
-            fs.unlinkSync("./public/design/products/" + producto.imageFrente);
+            fs.unlinkSync("./public/design/" + producto.imageFrente);
         }
         if (producto.imageBack != "image-default.png") {
-            fs.unlinkSync("./public/design/products/" + producto.imageBack);
+            fs.unlinkSync("./public/design/" + producto.imageBack);
         }
 
         let data = JSON.stringify(products, null, " ");

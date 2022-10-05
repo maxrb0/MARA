@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include ("./partials/head.ejs")%>
+
+</head>
+
+<body>
+    <header>
+        
+        <%- include ("./partials/header.ejs")%>
+
+    </header>
+
+    <div class="topRow">
+        <li><a href="/register">Creá tu cuenta</a></li>
+        <li><a href="/login">Ingresá</a></li>
+    </div>
+
+    <main>
+    <!--El contenido de la pagina seria-->
+    <!--Desde acá-->
+
+
+        <div class="contenedorMayor2">
+            <div class="contenedorProducto">
+                <img class="prodCarrito" src="/design/real madrid frente.jpg" alt="">
+                <div class="contTalla">
+                    <label class="textoCarrito">Seleccionar Talla</label>
+                   <select name="categoria" class="cantidad">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                   </select>
+                   <label class="textoCarrito">Seleccionar Cantidad</label>
+                   <select name="categoria" class="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                   </select>
+                   <div class="precioCarrito">
+                    <h2 class="textoDetalle">$15.000</h2>
+                   </div>
+                </div>
+                <div class="basurita">
+                    <button class="botonMercado" type="submit" value="Comprar"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedorMayor2">
+            <div class="contenedorProducto">
+                <img class="prodCarrito" src="/design/city frente.jpg" alt="">
+                <div class="contTalla">
+                    <label class="textoCarrito">Seleccionar Talla</label>
+                   <select name="categoria" class="cantidad">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                   </select>
+                   <label class="textoCarrito">Seleccionar Cantidad</label>
+                   <select name="categoria" class="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                   </select>
+                   <div class="precioCarrito">
+                    <h2 class="textoDetalle">$15.000</h2>
+                   </div>
+                </div>
+                <div class="basurita">   
+                    <button class="botonMercado" type="submit" value="Comprar"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedorMayor2">
+            <div class="contenedorProducto2">
+                <h2 class="textoDetalle">Sub Total</h2>
+                <p class="precioFinal" >$30.000</p>
+                <div class="basurita">
+                    <button class="botonMercado" type="submit" value="Comprar"><i class="fas fa-handshake"></i></button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    <!--Hasta acá acá-->
+    <!--Lo otro es header y footer-->
+    </main>
+
+    <footer class="footer"> 
+
+        <%- include ("./partials/footer.ejs")%>
+        
+    </footer>
+    
+</body>
+</html>

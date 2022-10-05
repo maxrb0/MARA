@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("./partials/head.ejs")%>
+</head>
+<body>
+    <header>
+        <%- include ("./partials/header.ejs")%>
+    </header>
+    <main class="register">
+
+        <div class="fondo">
+
+        <h2 class="titulosForm">Edita tu producto</h2>
+        
+        <form class="formSignup" action="/edit/<%=pToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
+            <label class="titulosForm" for="info-personal"><b>Información Del Producto</b></label>
+
+      
+            <label class="titulosForm" for="category" >Liga Del equipo:</label>   
+            <select name="category" id="category" class="textos">
+                <option value="">Liga</option>
+                <option value="La liga" <%= (pToEdit.category == "La liga")? "selected":"" %>>La liga</option>
+                <option value="Premier League" <%= (pToEdit.category == "Premier League")? "selected":"" %> >Premier League</option>
+                <option value="Serie A" <%= (pToEdit.category == "Serie A")? "selected":"" %> >Serie A</option>
+                <option value="Primera Division Argentina" <%= (pToEdit.category == "Primera Division Argentina ")? "selected":"" %> >Primera Division Argentina </option>
+                <option value="Primera Division Colombiana" <%= (pToEdit.category == "Primera Division Colombiana")? "selected":"" %> >Primera Division Colombiana</option>
+                <option value="Selecciones Mundiales" <%= (pToEdit.category == "Selecciones Mundiales")? "selected":"" %> >Selecciones Mundiales </option>
+                <option value="MLS" <%= (pToEdit.category == "MLS")? "selected":"" %> >MLS </option>
+            </select>
+
+
+            <label class="titulosForm" for="name" >Nombre Camiseta:</label>
+            <input class="textos" type="text" id="name" name="nameCamiseta" value="<%=pToEdit.name%>">
+           
+            <label class="titulosForm" for="name" >Caracteristicas:</label>
+            <input class="textos" type="text" id="description" name="descriptonCamiseta" value="<%=pToEdit.description%>">
+
+            <label class="titulosForm" for="name" >Precio:</label>
+            <input class="textos" type="number" id="price" name="priceCamiseta" value="<%=pToEdit.price%>">
+
+            
+            <label class="titulosForm" for="imgFrente">Imagen camiseta de frente:</label>
+            <input class="textos" type="file" id="imgFrente" name="imagenfrente">
+
+
+            <label class="titulosForm" for="imgBack" >Imagen camiseta espalda:</label>
+            <input class="textos" type="file" id="imgBack" name="imagenback">
+
+   
+                <input class="botones" type="submit" value="Guardar">
+                
+            </form>
+            </div>
+    
+        </main>
+
+<footer class="footer">
+    <%- include ("./partials/footer.ejs")%>
+</footer>
+
+</body>
+</html>

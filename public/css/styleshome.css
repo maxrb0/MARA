@@ -177,12 +177,6 @@ div article img{
     border-radius: 6px;
 }
 
-.iconosHeader{
-    width: 6vh;
-    height: 6vh;
-}
-
-
 .iconosTop{
     display: flex;
     margin: auto;
@@ -241,7 +235,6 @@ div article img{
 
 
 .barraLupa{
-    width: 35%;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -264,12 +257,19 @@ div article img{
     text-align: center;
 }
 
+.contarritoMercado{
+display: flex;
+}
 
 .contarritoMercado i{
     color: white;
     font-size: 100%;
+
 }
 
+.user{
+margin-left: 25%;
+}
 
 .linksIzq{
     margin-top: 20px;
@@ -527,7 +527,10 @@ div.imagenesCamisetas div article a div{
     margin-bottom: 10px;
 }
 
-
+/* validaciones */
+.errores{
+    color: red;
+}
 
 
 @media(min-width:380px){
@@ -700,6 +703,10 @@ div.imagenesCamisetas div article a div{
     .contarritoMercado{
         font-size: 140%;
         padding: 0%;
+    }
+
+    .user{
+        margin-left: 40%;
     }
 
     

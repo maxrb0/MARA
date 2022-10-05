@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <%- include ("./partials/head.ejs")%>
+
+</head>
+
+<body>
+    <header>
+
+        <%- include ("./partials/header.ejs")%>
+
+    </header>
+
+     <!--El contenido de la pagina seria-->
+    <!--Desde acá-->
+
+
+
+
+    <main class="register">
+
+
+
+        <div class="fondo">
+
+        <h2 class="titulosForm">Regístrate</h2>
+
+        <!-- <input type="text" name="firstname" id="firstname" value="<%= locals.old && old.firstname ? old.firstname:'' %>" placeholder="John Doe" > 
+         <input type="text" id="lastname"  name="lastname" placeholder="John Doe" value="<%= locals.old && old.lastname ? old.lastname:'' %>"> -->
+        
+        <form class="formSignup" action="/user/register" method="POST" enctype="multipart/form-data" charset=utf-8>
+            <label class="titulosForm" for="info-personal"><b>Información Personal</b></label>
+
+
+            <input class="textos" type="text" name="name" id="name" placeholder="Nombre y apellido" value="<%= locals.old && old.name ? old.name:'' %>" > 
+             <% if (locals.errors && errors.name) { %>
+                <div class="errores">
+                    <%= errors.name.msg%>
+                </div>
+                <% } %>
+
+            <input class="textos" type="text" name="user" id="user" placeholder="Nombre de usuario" value="<%= locals.old && old.user ? old.user:'' %>">
+            <% if (locals.errors && errors.user) { %>
+                <div class="errores">
+                    <%= errors.user.msg%>
+                </div>
+                <% } %>
+
+            <input class="textos" type="email" name="email" id="email" placeholder="algo@algo.com" value="<%= locals.old && old.email ? old.email:'' %>">
+            <% if (locals.errors && errors.email) { %>
+                <div class="errores">
+                    <%= errors.email.msg%>
+                </div>
+                <% } %>
+
+            <input class="textos" type="text" name="address" placeholder="calle falsa 123" value="<%= locals.old && old.address ? old.address:'' %>">
+            <% if (locals.errors && errors.address) { %>
+                <div class="errores">
+                    <%= errors.address.msg%>
+                </div>
+                <% } %>
+
+
+            <label class="titulosForm" for="birth_date"><b>Fecha de nacimiento</b></label>
+
+            <input class="textos" type="date" name="birth_date" id="birth_date" value="<%= locals.old && old.birth_date ? old.birth_date:'' %>">
+
+        <label class="titulosForm" for="password"><b>Contraseña</b></label>
+
+            <input class="textos" type="password" name="password" id="password" placeholder="Elegí tu contraseña">
+            <% if (locals.errors && errors.password) { %>
+                <div class="errores">
+                    <%= errors.password.msg%>
+                </div>
+                <% } %>
+
+
+                <input class="textos" type="password" name="pass_confirm" id="pass_confirm" placeholder="Confirmá tu contraseña">
+                <% if (locals.errors && errors.pass_confirm) { %>
+                    <div class="errores">
+                        <%= errors.pass_confirm.msg%>
+                    </div>
+                    <% } %>
+
+
+     
+                <label class="titulosForm" for="img">Foto de Perfil</label>
+
+                    <input class="textos" type="file" id="img" name="img" accept=".jpg,.png">
+
+            
+                <button class="botones" type="submit" >Enviar</button>
+                <button class="botones" type="reset">Borrar</button>
+
+            </form>
+         
+            <span class="forgotPass">
+                <a class="titulosForm2" href="/login" title="login" id="link-login">Ya tenés una cuenta? Ingresá aquí</a>
+              </span>
+            </div>
+    
+        </main>
+
+
+
+    <!--Hasta acá acá-->
+    <!--Lo otro es header y footer-->
+    
+    <footer class="footer"> 
+        
+        <%- include ("./partials/footer.ejs")%>
+
+    </footer>
+    
+</body>
+</html>

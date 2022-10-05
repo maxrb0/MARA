@@ -8,7 +8,7 @@ const indexController = require ("../controller/indexController");
 
 var storage = multer.diskStorage({
   destination: function (req, files, cb) {
-    cb(null, "public/design");
+    cb(null, "public/design/images-products");
   },
   filename: function (req, files, cb) {
     console.log(files );
@@ -33,16 +33,16 @@ router.get("/product-detail/:id",indexController.detail);
 router.delete("/product-detail/:id", indexController.delete)
 
 //muestra el crear producto
-router.get("/crea-producto",indexController.crea);
+router.get("/crea",indexController.crea);
 router.post("/indexRouter/crea", upload.any(), indexController.store);
 // router.post("/indexRouter/crea", upload.single("imageBack"), indexController.store);
 
 
 
 //muestra el editar producto
-router.get("/editar-producto/:id",indexController.edit);
-router.put("/editar-producto/:id", upload.any("imageFrente","imageBack"), indexController.update);
-// router.put("/editar-producto/:id", upload.single("imageBack"), indexController.update);
+router.get("/edit/:id",indexController.edit);
+router.put("/edit/:id", upload.any("imageFrente","imageBack"), indexController.update);
+// router.put("/edit/:id", upload.single("imageBack"), indexController.update);
 
 
 

@@ -1,20 +1,30 @@
 [
-    {
-        "id": 1,
-        "firstName": "Jorge",
-        "lastName": "Gimenez",
-        "email": "Jorgegimenez@gmail.com",
-        "password": "hola123",
-        "category": "admin",
-        "image": "image-default.png"
-    },
-    {
-        "id": 2,
-        "firstName": "Roberto",
-        "lastName": "Rodriguez",
-        "email": "robertrodriguez@gmail.com",
-        "password": "password",
-        "category": "user",
-        "image": "image-default.png"
-    }
+ {
+  "id": 1,
+  "name": "Jorge",
+  "user": "Gimenez",
+  "email": "Jorgegimenez@gmail.com",
+  "password": "hola123",
+  "category": "admin",
+  "image": "image-default.png"
+ },
+ {
+  "id": 2,
+  "name": "Roberto",
+  "user": "Rodriguez",
+  "email": "robertrodriguez@gmail.com",
+  "password": "password",
+  "category": "user",
+  "image": "image-default.png"
+ },
+ {
+  "id": 1664773859408,
+  "name": "Santiago Leon",
+  "user": "RiseTSLeon",
+  "email": "santileon046@gmail.com",
+  "address": "calle falsa 123",
+  "password": "Santi04122005*",
+  "pass_confirm": "Santi04122005*",
+  "img": "img_user_default.png"
+ }
 ]
