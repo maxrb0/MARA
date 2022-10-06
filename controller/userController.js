@@ -14,6 +14,7 @@ const userController = {
         res.redirect("/")
     },
     //base de la verificacion de usuario
+    //Verificar si hay cookie y session
     verificacion:(req,res)=>{
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
         let user = users.find((u) => u.user == req.params.user && u.pass == req.params.pass);
