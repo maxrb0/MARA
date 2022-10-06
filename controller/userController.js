@@ -13,6 +13,17 @@ const userController = {
      login2: function (req, res) {
         res.redirect("/")
     },
+    //base de la verificacion de usuario
+    verificacion:(req,res)=>{
+        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+        let user = users.find((u) => u.user == req.params.user && u.pass == req.params.pass);
+        if(!user.isEmpty()){
+            //enviarle los datos de user
+            res.redirect("/", user);
+        }else{
+            res.redirect("/login");
+        }
+    },
 
     register:(req,res)=>{
         res.render("register")
