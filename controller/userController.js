@@ -6,13 +6,57 @@ const { validationResult} = require("express-validator")
 const UserModel = require("../models/user.js")
 
 const userController = {
-    login:(req,res)=>{
-        res.render("login")
-    },
-     //loguearse 
-     login2: function (req, res) {
-        res.redirect("/")
-    },
+    //Mostrar formulario de login//
+login: (req, res) => {
+
+    res.render("login")
+},
+
+//Loguearse//
+login2: function (req, res) {
+    let errors = validationResult(req)
+    if (errors.isEmpty()) {
+
+        let userToLog = UserModel.findByField("email", req.body.email)
+        if (userToLog) {
+            let isOkThePass = bcrypt.compareSync(req.body.password, userToLog.password)
+            if (isOkThePass) {
+                delete userToLog.password;
+                req.session.userLogged = userToLog;
+                if (req.body.recordarme) {
+                    res.cookie('recordarEmail', req.body.email, { maxAge: 90000 })
+                }
+
+                return res.redirect("perfil" + userToLog.id );
+            } else {
+                return res.render("login", {
+                    errors: {
+                        email: {
+                            msg: "Las credenciales son inválidas"
+                        }
+                    }
+                })
+            }
+
+        } else {
+            res.render("login", {
+                errors: {
+                    email: {
+                        msg: "Este email no está registrado"
+                    }
+                }
+            })
+        }
+
+
+    } else {
+        res.render('login', {
+            errors: errors.mapped(),
+            old: req.body
+        })
+    }
+
+},
     //base de la verificacion de usuario
     //Verificar si hay cookie y session
     verificacion:(req,res)=>{
@@ -84,6 +128,9 @@ const userController = {
         
 
     },
+
+
+
     
     perfil:(req,res)=>{
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));

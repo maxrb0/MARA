@@ -26,5 +26,25 @@
   "password": "Santi04122005*",
   "pass_confirm": "Santi04122005*",
   "img": "img_user_default.png"
+ },
+ {
+  "id": 1665107243716,
+  "name": "Santiago Leon",
+  "user": "sdadasd",
+  "email": "Santileon046@gmail.com",
+  "address": "calle falsa 123",
+  "password": "Santiago1",
+  "pass_confirm": "Santiago1",
+  "img": "img_user_default.png"
+ },
+ {
+  "id": 1665107993359,
+  "name": "Santiago Leon1",
+  "user": "RiseTSLeon1",
+  "email": "sdads@gmail.com",
+  "address": "calle falsa 1231",
+  "password": "Santiago01*",
+  "pass_confirm": "Santiago01*",
+  "img": "img_user_default.png"
  }
 ]

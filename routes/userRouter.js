@@ -4,6 +4,8 @@ const multer = require("multer");
 const path = require("path");
 const { body } = require("express-validator");
 const userController = require ("../controller/userController");
+const userLoggedMiddleware = require ("../middlewares/userlogged-middleware");
+
 
 
 
@@ -46,16 +48,20 @@ const validaciones = [
     })
 ]
 
+//VALIDACIONES DEL LOGIN
+
+
+
 
 router.get("/",userController.users);
 
 router.get("/login",userController.login);
-router.post("/login", userController.login2);
+router.post("/login", userLoggedMiddleware, userController.login2);
 
 router.get("/register",userController.register);
 router.post("/register", upload.single("img"), validaciones, userController.register2);
 
-router.get("/perfil", userController.perfil);
+router.get("/perfil/:id", userController.perfil);
 
 
 
