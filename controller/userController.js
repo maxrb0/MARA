@@ -4,6 +4,7 @@ const usersFilePath = path.join(__dirname, '../data/usersData.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const { validationResult} = require("express-validator")
 const UserModel = require("../models/user.js")
+const bcrypt = require('bcryptjs');
 
 const userController = {
     //Mostrar formulario de login//
@@ -16,7 +17,7 @@ login: (req, res) => {
 login2: function (req, res) {
     let errors = validationResult(req)
     if (errors.isEmpty()) {
-
+        
         let userToLog = UserModel.findByField("email", req.body.email)
         if (userToLog) {
             let isOkThePass = bcrypt.compareSync(req.body.password, userToLog.password)
@@ -57,18 +58,6 @@ login2: function (req, res) {
     }
 
 },
-    //base de la verificacion de usuario
-    //Verificar si hay cookie y session
-    verificacion:(req,res)=>{
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        let user = users.find((u) => u.user == req.params.user && u.pass == req.params.pass);
-        if(!user.isEmpty()){
-            //enviarle los datos de user
-            res.redirect("/", user);
-        }else{
-            res.redirect("/login");
-        }
-    },
 
     register:(req,res)=>{
         res.render("register")
@@ -130,13 +119,17 @@ login2: function (req, res) {
     },
 
 
-
     
-    perfil:(req,res)=>{
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        let usuario = users.find((p) => p.id == req.params.id);
-        res.render("perfil", { user: usuario })
-        
+    perfil: (req, res) => {
+        return res.render("perfil", {
+            user: req.session.userLogged
+        });
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('recordarEmail');
+        req.session.destroy();
+        return res.redirect('/');
     },
 
     users:(req,res)=>{

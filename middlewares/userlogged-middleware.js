@@ -1,8 +1,7 @@
 const user = require("../models/User.js");
 const path = require("path");
-const usersFilePath = path.join(__dirname, '../data/usersData.json');
+// const usersFilePath = path.join(__dirname, '../data/usersData.json');
 
-const userModel = require("../models/User.js")
 
 function userLoggedMiddleware(req, res, next) {
     //Variable local para usar, y mostrar elementos al usuario logeado
@@ -10,7 +9,7 @@ function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.recordarEmail;
-    let userFromCookie = userModel.findByField('email', emailInCookie);
+    let userFromCookie = user.findByField('email', emailInCookie);
 
     if (userFromCookie) {
         req.session.userLogged = userFromCookie;

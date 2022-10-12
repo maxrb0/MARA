@@ -12,9 +12,52 @@
 
     </header>
 
+
     <main>
-        
+        <section class="detalleProducto">
+
+            <article class="producto">
+                <h4>
+                    Hola <%=user.name%>
+                </h4>
+
+                <div class="user-img">
+                    <img src="/images/user-images/<%=user.img%>" />
+
+                </div>
+                <br>
+
+            </article>
+            <article class="caracteristicas">
+                <h4>Perfil</h4>
+                <div class=" infoPerfil">
+                    <h3>Email:</h3>
+                    <p>
+                        <%=user.email%>
+                    </p>
+
+                    <h3>Dirección:</h3>
+                    <p>
+                        <%=user.address%>
+                    </p>
+
+                    <h3>Nacimiento:</h3>
+                    <p>
+                        <%=user.birthday%>
+                    </p>
+                </div>
+
+
+            </article>
+
+        </section>
+        <br>
+
     </main>
+
+
+
+
 
     <footer class="footer"> 
         

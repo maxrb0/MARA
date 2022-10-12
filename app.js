@@ -1,13 +1,19 @@
 const express = require('express');
 const path = require("path");
-const indexRouter = require("./routes/indexRouter");
-const userRouter = require("./routes/userRouter");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require("cookie-parser") 
-const bcrypt = require("bcryptjs")
 
 const app = express();
+
+
+//requerir rutas
+const indexRouter = require("./routes/indexRouter");
+const userRouter = require("./routes/userRouter");
+
+const userLoggedMiddleware = require("./middlewares/userLogged-middleware");
+
+
 
 app.set("view engine", "ejs");
 
@@ -15,8 +21,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(session({secret:"Mundo de las camisetas"}));
+app.use(session({
+    secret: "Mundo de las camisetas", resave: false, saveUninitialized: false
+}));
 
+app.use(userLoggedMiddleware);
 
 
 
