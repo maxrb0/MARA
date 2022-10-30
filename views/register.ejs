@@ -39,7 +39,7 @@
                 <div class="errores">
                     <%= errors.name.msg%>
                 </div>
-                <% } %>
+                <% } %>  
 
             <input class="textos" type="text" name="user" id="user" placeholder="Nombre de usuario" value="<%= locals.old && old.user ? old.user:'' %>">
             <% if (locals.errors && errors.user) { %>
