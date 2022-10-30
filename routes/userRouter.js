@@ -3,11 +3,9 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const { body } = require("express-validator");
-const userController = require ("../controller/userController");
-const userLoggedMiddleware = require ("../middlewares/userlogged-middleware");
-const guestMiddlware = require("../middlewares/guest-middlewares")
-const authMiddlware = require("../middlewares/auth-middleware")
 
+
+const userController = require ("../controller/userController");
 
 
 
@@ -32,6 +30,7 @@ const upload = multer({ storage });
 
 
 
+
 //VALIDACIONES REGISTRO
 const validaciones = [
     body("name").notEmpty().withMessage("debes agregar un nombre"),
@@ -50,20 +49,33 @@ const validaciones = [
 ]
 
 
+//Validaciones Login
+const validacionesLog = [
+    body("email").isEmail().withMessage("Debes ingresar un email")
+]
 
 
 
 
+const guestMiddlware = require("../middlewares/guest-middlewares");
+const authMiddlware = require("../middlewares/auth-middleware");
 
-router.get("/",userController.users);
 
+// router.get("/",userController.perfil);
+
+//Ingresar al login//
 router.get("/login", guestMiddlware, userController.login);
-router.post("/login", userController.login2);
+router.post("/login", validacionesLog, userController.login2);
 
+//Ingresar al registro//
 router.get("/register", guestMiddlware, userController.register);
+//Procesar el registro//
 router.post("/register", upload.single("img"), validaciones, userController.register2);
 
-router.get("/perfil", authMiddlware,  userController.perfil);
+
+//Mostrar perfil
+router.get("/perfil", authMiddlware, userController.perfil);
+
 
 router.get('/logout', userController.logout);
 

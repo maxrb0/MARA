@@ -115,10 +115,10 @@ const indexController = {
         products = products.filter((p) => p.id != req.params.id);
 
         if (producto.imageFrente != "image-default.png") {
-            fs.unlinkSync("./public/design/" + producto.imageFrente);
+            fs.unlinkSync("./public/design/images-products/" + producto.imageFrente);
         }
         if (producto.imageBack != "image-default.png") {
-            fs.unlinkSync("./public/design/" + producto.imageBack);
+            fs.unlinkSync("./public/design/images-products/" + producto.imageBack);
         }
 
         let data = JSON.stringify(products, null, " ");
