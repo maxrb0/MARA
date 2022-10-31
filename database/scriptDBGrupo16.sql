@@ -11,7 +11,7 @@ user_id int NOT NULL auto_increment,
 user_dni int NOT NULL unique,
 user_name varchar(40) NOT NULL,
 user_image varchar(60) ,
-user_adress varchar(40) NOT NULL,
+user_address varchar(40) NOT NULL,
 user_pass varchar(35) NOT NULL,
 user_is_admin boolean,
 primary key (user_id)
