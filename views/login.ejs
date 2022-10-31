@@ -23,22 +23,38 @@
     <h2 class="titulosForm">Ingresá</h2>
  
     
-    <form class="formSignup" action="/" method="POST">
-        <input class="textos" type="text" name="user" placeholder="Nombre de usuario">
-        <input class="textos" type="password" name="pass" placeholder="Elegí tu contraseña">
+    <form class="formSignup" action="/user/login" method="POST">
+
+        <input class="textos" type="email" id="email" name="email" placeholder="Ingresá tu correo Electronico"
+                        value="<%= locals.old && old.email ? old.email:'' %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="errores">
+                            <%= errors.email.msg%>
+                        </div>
+                        <% } %>
+
+                        <input class="textos" type="password" id="password" name="password" placeholder="Ingresá tu contraseña" required>
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="errores">
+                                <%= errors.password.msg%>
+                            </div>
+                            <% } %>
+
         <div class="contRecordar">
             <label class="titulosForm" for="">Recordar Usuario</label>
-            <input class="botonRecordar" type="checkbox" name="Recordar contraseña">
+            <input class="botonRecordar" type="checkbox" name="recordarme">
         </div>
+        
         <button class="botones" type="submit" value="Enviar">Enviar</button>
     </form>
+
 
         <span class="forgotPass2">
         <a class="titulosForm" href="" title="Forgot Password" id="link-reset">Has olvidado tu contraseña?</a>
     </span>
 
         <span class="forgotPass2">
-        <a class="titulosForm" href="/register" title="register" id="link-register">No tenés cuenta todavía?  Regístrate</a>
+        <a class="titulosForm" href="/user/register" title="register" id="link-register">No tenés cuenta todavía?  Regístrate</a>
     </span>
 </div>
     

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("./partials/head.ejs")%>
+</head>
+
+<body>
+    
+    <header>
+        
+        <%- include ("./partials/header.ejs")%>
+
+        <div class="buttonSes">
+            <a href="/user/logout">Cerrar sesión</a>
+        </div>
+
+    </header>
+
+
+    <main>
+        <section class="detalleProducto">
+
+            <article class="producto">
+                <h4>
+                    Hola <%= user.name %>
+                </h4>
+
+                <div class="user-img">
+                    <img src="/design/images-users/<%=user.img%>" />
+
+                </div>
+                <br>
+
+            </article>
+            <article class="caracteristicas">
+                <h4>Perfil</h4>
+                <div class=" infoPerfil">
+                    <h3>Email:</h3>
+                    <p>
+                        <%=user.email%>
+                    </p>
+
+                    <h3>Dirección:</h3>
+                    <p>
+                        <%=user.address%>
+                    </p>
+
+                    <h3>Nacimiento:</h3>
+                    <p>
+                        <%=user.birthday%>
+                    </p>
+                </div>
+
+
+            </article>
+
+        </section>
+        <br>
+
+    </main>
+
+
+
+
+    <footer class="footer"> 
+        
+        <%- include ("./partials/footer.ejs")%>
+
+    </footer>
+
+</body>
+</html>

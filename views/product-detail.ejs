@@ -12,11 +12,6 @@
         <%- include ("./partials/header.ejs")%>
 
     </header>
-
-    <div class="topRow">
-        <li><a href="/register">Creá tu cuenta</a></li>
-        <li><a href="/login">Ingresá</a></li>
-    </div>
     
     <main>
     <!--El contenido de la pagina seria-->
@@ -27,8 +22,8 @@
 
             <h2 class="textoDetalle"><%= productos.name %></h2>
                 <div class="imgProducto">
-                    <img class="prodReal" src="/design/<%= productos.imageFrente %>" alt="Camiseta">
-                    <img class="prodReal" src="/design/<%= productos.imageBack %>" alt="Camiseta">
+                    <img class="prodReal" src="/design/images-products/<%= productos.imageFrente %>" alt="Camiseta">
+                    <img class="prodReal" src="/design/images-products/<%= productos.imageBack %>" alt="Camiseta">
                 </div>
             <div>
             <h2 class="textoDetalle">Precio</h2>
