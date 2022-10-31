@@ -23,7 +23,7 @@ const userController = {
                 name: req.body.name,
                 user: req.body.user,
                 email: req.body.email,
-                birthday: req.body.birthday,
+                birthday: req.body.birth_date,
                 address: req.body.address,
                 password: bcrypt.hashSync(req.body.password, 10),
                 img: "img_user_default.png"
