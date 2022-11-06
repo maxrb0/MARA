@@ -41,5 +41,7 @@ user_is_admin:{
 
     let users = sequelize.define(alias, cols, config);
 
+
+
     return users;
 }
